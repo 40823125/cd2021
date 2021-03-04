@@ -55,9 +55,9 @@
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 markdown 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2020</vh>
-<v t="leo.20180423103639.1"><vh>2020 Fall CP 課程</vh>
+<v t="leo.20180423103639.1"><vh>2021 Fall CD 課程</vh>
 <v t="leo.20180423103656.1"><vh>@edit 20210304.md</vh>
-<v t="leo.20210304154646.1"><vh>@20210304.md</vh></v>
+<v t="leo.20210304161605.1"><vh>newHeadline</vh></v>
 </v>
 </v>
 </v>
@@ -92,22 +92,20 @@ g.es("admin pelican Github 執行完畢")
 <t tx="leo.20180423103639.1"></t>
 <t tx="leo.20180423103656.1">@language md
 ---
-Title: 2021 協同產品設計實習 40823125
+Title: 2021 Fall CD 課程
 Date: 2021-03-04 11:00
 Category: Misc
 Tags: 2021FallCD
-Slug: 2021-Collaborative-product-design-internship
+Slug: 2021-Fall-Intro-to-computer-programming
 Author: yen
 ---
 
-2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.
+2021 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-@others
-
-</t>
-<t tx="leo.20210304154646.1">Python
+@others</t>
+<t tx="leo.20210304161605.1">Python
 ----
 Python 可以用來開發單機版的視窗程式套件 Pyslvs-UI
 
@@ -121,7 +119,9 @@ Python 可以用於機器學習 Keras, Pytorch
 Flutter
 ----
 
-Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps</t>
+Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps
+
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
