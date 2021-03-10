@@ -56,8 +56,8 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2020</vh>
 <v t="leo.20180423103639.1"><vh>2021 Fall CD 課程</vh>
-<v t="leo.20180423103656.1"><vh>@edit 20210304.md</vh>
-<v t="leo.20210304161605.1"><vh>newHeadline</vh></v>
+<v t="leo.20180423103656.1"><vh>@clean 20210304.md</vh>
+<v t="leo.20210310202212.1"><vh>20210310</vh></v>
 </v>
 </v>
 </v>
@@ -100,12 +100,12 @@ Slug: 2021-Fall-Intro-to-computer-programming
 Author: yen
 ---
 
-2021 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.
+2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20210304161605.1">Python
+<t tx="leo.20210310202212.1">Python
 ----
 Python 可以用來開發單機版的視窗程式套件 Pyslvs-UI
 
@@ -119,9 +119,7 @@ Python 可以用於機器學習 Keras, Pytorch
 Flutter
 ----
 
-Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps
-
-</t>
+Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
