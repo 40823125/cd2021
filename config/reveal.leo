@@ -221,7 +221,7 @@ vertical: body pane on the botton</t>
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;我認為是因為主體的孔跟轉盤的軸接的太緊了，也許&lt;/strong&gt;&lt;strong&gt;只要把其中的一個修改的小一點就可以了&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;我認為是轉盤的軸跟轉盤是一體的所以導致轉盤的軸跟coppeliaSim的軸衝突導致,也許&lt;strong&gt;只要把轉盤跟軸分開就可以了&lt;/strong&gt;&lt;/strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/p&gt;&lt;/iframe&gt;&lt;img src="/images/錯誤1.png" alt="" width="500" height="267"&gt;&lt;/p&gt;
+    &lt;/p&gt;&lt;/iframe&gt;&lt;img src="./../images/錯誤1.png" alt="" width="500" height="267"&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210310003406.1">&lt;section&gt;
     &lt;h3&gt;協同產品設計實習 40823125&lt;/h3&gt;
