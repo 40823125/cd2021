@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>40823125 cd2021 - Misc</title><link href="https://40823125.github.io/cd2021/blog/" rel="alternate"></link><link href="https://40823125.github.io/cd2021/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/cd2021/blog/</id><updated>2021-03-10T20:55:57+08:00</updated><entry><title>2021 Fall CD 課程</title><link href="https://40823125.github.io/cd2021/blog/2021-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2021-03-04T11:00:00+08:00</published><updated>2021-03-10T20:55:57+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2021-03-04:/cd2021/blog/2021-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.&lt;/p&gt;
-
-
-&lt;h2&gt;Python&lt;/h2&gt;
-&lt;p&gt;Python 可以用來開發單機版的視窗程式套件 Pyslvs-UI&lt;/p&gt;
-&lt;p&gt;Python 可以用來開發網際版的內容管理系統 CMSiMDE&lt;/p&gt;
-&lt;p&gt;Python 可以用來控制 CoppeliaSim 與 Webots 虛擬環境中的機電系統&lt;/p&gt;
-&lt;p&gt;Python 可以用於機器學習 Keras, Pytorch&lt;/p&gt;
-&lt;h2&gt;Flutter&lt;/h2&gt;
-&lt;p&gt;Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps&lt;/p&gt;</content><category term="Misc"></category><category term="2021FallCD"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>40823125 cd2021 - Misc</title><link href="https://40823125.github.io/cd2021/blog/" rel="alternate"></link><link href="https://40823125.github.io/cd2021/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/cd2021/blog/</id><updated>2021-03-11T21:24:01+08:00</updated><entry><title>2021 Fall CD 課程</title><link href="https://40823125.github.io/cd2021/blog/2021-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2021-03-04T11:00:00+08:00</published><updated>2021-03-11T21:24:01+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2021-03-04:/cd2021/blog/2021-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;第1到4周分組任務分配
+</summary><content type="html">&lt;p&gt;第1到4周分組任務分配
+&lt;/p&gt;
+&lt;p&gt;內容討論:&lt;/p&gt;
+&lt;p&gt;stage1-ag14 發球機&lt;/p&gt;
+&lt;p&gt;製作動機:
+因為我們的組原有一個人是桌球社社長,他想要藉由發球機提供球員自主練習機會。&lt;/p&gt;
+&lt;p&gt;製作規劃:
+第二周:繪製零件圖並組合。&lt;/p&gt;
+&lt;p&gt;第三周:用CoppeliaSim測試並修改。&lt;/p&gt;
+&lt;p&gt;第四周:報告。&lt;/p&gt;
+&lt;p&gt;任務分配:&lt;/p&gt;
+&lt;p&gt;40823125:&lt;/p&gt;
+&lt;p&gt;CoppeliaSim測試&lt;/p&gt;
+&lt;p&gt;轉換為Inventor檔並組合&lt;/p&gt;
+&lt;p&gt;40823110:&lt;/p&gt;
+&lt;p&gt;製圖(Onshape)&lt;/p&gt;
+&lt;p&gt;40823132:&lt;/p&gt;
+&lt;p&gt;PDF製作&lt;/p&gt;</content><category term="Misc"></category><category term="2021FallCD"></category></entry></feed>

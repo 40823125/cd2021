@@ -29,8 +29,14 @@
 <v t="leo.20200818170636.1"><vh>slide3</vh>
 <v t="leo.20210310003310.1"><vh>slide 3-1</vh></v>
 <v t="leo.20210310000208.1"><vh>slide 3-2</vh></v>
+<v t="leo.20210311212034.1"><vh>slide 3-3</vh></v>
 </v>
-<v t="leo.20210310201528.1"><vh>slide4</vh></v>
+<v t="leo.20210310201528.1"><vh>slide4</vh>
+<v t="leo.20210311212123.1"><vh>slide4-1</vh></v>
+<v t="leo.20210311212232.1"><vh>slide4-2</vh></v>
+<v t="leo.20210311212232.2"><vh>slide4-3</vh></v>
+</v>
+<v t="leo.20210311211943.1"><vh>slide 5</vh></v>
 </v>
 </v>
 </v>
@@ -180,9 +186,8 @@ vertical: body pane on the botton</t>
     &lt;a href="https://revealjs.com"&gt;
         &lt;img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"&gt;
     &lt;/a&gt;
-&lt;/section&gt;
-
-</t>
+    &lt;h3&gt;協同產品設計實習&lt;/h3&gt;
+&lt;/section&gt;</t>
 <t tx="leo.20200818170535.1">&lt;section&gt;
 &lt;h2&gt;coppeliaSim模擬影片&lt;/h2&gt;
 &lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/p66UvX3NPIU"&gt;&lt;/iframe&gt;&lt;/p&gt;
@@ -209,8 +214,9 @@ vertical: body pane on the botton</t>
     &lt;p&gt;PDF製作&lt;/p&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210310000208.1">&lt;section&gt;
-    &lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/GUHDy4NxUF4"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/section&gt;</t>
+    &lt;p&gt;&lt;img alt="" height="350" src="./../images/錯誤1.png" width="600"&gt;&lt;/p&gt;
+&lt;/section&gt;
+</t>
 <t tx="leo.20210310001642.1">&lt;!-- Example of nested vertical slides --&gt;
 &lt;section&gt;
     @others
@@ -221,8 +227,8 @@ vertical: body pane on the botton</t>
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;我認為是因為主體的孔跟轉盤的軸接的太緊了，也許&lt;/strong&gt;&lt;strong&gt;只要把其中的一個修改的小一點就可以了&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;我認為是轉盤的軸跟轉盤是一體的所以導致轉盤的軸跟coppeliaSim的軸衝突導致,也許&lt;strong&gt;只要把轉盤跟軸分開就可以了&lt;/strong&gt;&lt;/strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/p&gt;&lt;/iframe&gt;&lt;img src="./../images/錯誤1.png" alt="" width="500" height="267"&gt;&lt;/p&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+</t>
 <t tx="leo.20210310003406.1">&lt;section&gt;
     &lt;h3&gt;協同產品設計實習 40823125&lt;/h3&gt;
    &lt;p&gt;stage1-ag14 發球機&lt;/p&gt;
@@ -230,8 +236,29 @@ vertical: body pane on the botton</t>
 &lt;p&gt;製作規劃:&lt;br&gt;&lt;span&gt;第二周:繪製零件圖並組合。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第三周:用CoppeliaSim測試並修改。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第四周:報告。&lt;/span&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210310201528.1">&lt;section&gt;
+    @others
+&lt;/section&gt;
+</t>
+<t tx="leo.20210311211943.1">&lt;section&gt;
 &lt;h1&gt;分組開會紀錄&lt;/h1&gt;
-&lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/dLK8QT6gpw8"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="600" height="350" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/dLK8QT6gpw8"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/section&gt;
+</t>
+<t tx="leo.20210311212034.1">&lt;section&gt;
+    &lt;p&gt;&lt;iframe width="600" height="350" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/GUHDy4NxUF4"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/section&gt;
+</t>
+<t tx="leo.20210311212123.1">&lt;section&gt;
+&lt;h3&gt;主體&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" height="235" src="./../images/主體-4.png" width="350"&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210311212232.1">&lt;section&gt;
+&lt;h3&gt;引球圓盤&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" height="235" src="/./../images/引球圓盤-2.png" width="350"&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210311212232.2">&lt;section&gt;
+&lt;h3&gt;球桶&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" height="235" src="./../images/球桶-1.png" width="350"&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 </tnodes>
 </leo_file>
