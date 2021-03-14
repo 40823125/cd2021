@@ -37,6 +37,11 @@
 <v t="leo.20210311212232.2"><vh>slide4-3</vh></v>
 </v>
 <v t="leo.20210311211943.1"><vh>slide 5</vh></v>
+<v t="leo.20210314214617.1"><vh>slide6</vh>
+<v t="leo.20210314214625.1"><vh>slide6-1</vh></v>
+<v t="leo.20210314214625.2"><vh>slide6-2</vh></v>
+<v t="leo.20210314214625.3"><vh>slide6-3</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -259,6 +264,27 @@ vertical: body pane on the botton</t>
 <t tx="leo.20210311212232.2">&lt;section&gt;
 &lt;h3&gt;球桶&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" height="235" src="./../images/球桶-1.png" width="350"&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210314214617.1">&lt;section&gt;
+    @others
+&lt;/section&gt;</t>
+<t tx="leo.20210314214625.1">&lt;section&gt;
+&lt;h1&gt;發球機版本&lt;/h1&gt;
+&lt;p&gt;第1版&lt;/p&gt;
+&lt;p&gt;&lt;a href="/downloads/組合件.stl"&gt;組合件.stl&lt;/a&gt;|&lt;a href="/downloads/球體.stl"&gt;球體.stl&lt;/a&gt;|&lt;a href="/downloads/主體.stl"&gt;主體.stl&lt;/a&gt;|&lt;a href="/downloads/球桶.stl"&gt;球桶.stl&lt;/a&gt;|&lt;a href="/downloads/引球圓盤.stl"&gt;引球圓盤.stl&lt;/a&gt;&lt;/marquee&gt;&lt;/p&gt;
+&lt;/section&gt;
+</t>
+<t tx="leo.20210314214625.2">&lt;section&gt;
+&lt;p&gt;第2版&lt;/p&gt;
+&lt;p&gt;&lt;a href="/downloads/組合圖-2.stl"&gt;組合圖-2.stl&lt;/a&gt;|&lt;a href="/downloads/發球機主體-2.stl"&gt;發球機主體-2.stl&lt;/a&gt;|&lt;a href="/downloads/引球圓盤-2.stl"&gt;引球圓盤-2.stl&lt;/a&gt;&lt;/marquee&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/file/d/1GsmMkOOK3HrquF32gm09deCQAFWCTjaf/view?usp=sharing"&gt;發球機組合圖-2.ttt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/fvoF_d6DNsk"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210314214625.3">&lt;section&gt;
+&lt;p&gt;第3版&lt;/p&gt;
+&lt;p&gt;&lt;a href="/downloads/組合圖-3.stl"&gt;組合圖-3.stl&lt;/a&gt;|&lt;a href="/downloads/主體-3.stl"&gt;主體-3.stl&lt;/a&gt;|&lt;a href="/downloads/引球圓盤-3.stl"&gt;引球圓盤-3.stl&lt;/a&gt;|&lt;a href="/downloads/軸承.stl"&gt;軸承.stl&lt;/a&gt;&lt;/marquee&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/file/d/17N-8ABgMcNleLfhRX5221DyTr4VL6H80/view?usp=sharing"&gt;發球機組合圖-3.ttt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/ghPPEBOKs_M"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 </tnodes>
 </leo_file>
