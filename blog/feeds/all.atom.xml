@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>40823125 cd2021</title><link href="https://40823125.github.io/cd2021/blog/" rel="alternate"></link><link href="https://40823125.github.io/cd2021/blog/feeds/all.atom.xml" rel="self"></link><id>https://40823125.github.io/cd2021/blog/</id><updated>2021-03-11T21:24:01+08:00</updated><entry><title>2021 Fall CD 課程</title><link href="https://40823125.github.io/cd2021/blog/2021-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2021-03-04T11:00:00+08:00</published><updated>2021-03-11T21:24:01+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2021-03-04:/cd2021/blog/2021-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;第1到4周分組任務分配
+<feed xmlns="http://www.w3.org/2005/Atom"><title>40823125 cd2021</title><link href="https://40823125.github.io/cd2021/blog/" rel="alternate"></link><link href="https://40823125.github.io/cd2021/blog/feeds/all.atom.xml" rel="self"></link><id>https://40823125.github.io/cd2021/blog/</id><updated>2021-03-15T20:41:40+08:00</updated><entry><title>2021 Fall CD 課程</title><link href="https://40823125.github.io/cd2021/blog/2021-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2021-03-04T11:00:00+08:00</published><updated>2021-03-15T20:41:40+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2021-03-04:/cd2021/blog/2021-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;第1到4周分組任務分配
 </summary><content type="html">&lt;p&gt;第1到4周分組任務分配
 &lt;/p&gt;
 &lt;p&gt;內容討論:&lt;/p&gt;
@@ -12,9 +12,10 @@
 &lt;p&gt;第四周:報告。&lt;/p&gt;
 &lt;p&gt;任務分配:&lt;/p&gt;
 &lt;p&gt;40823125:&lt;/p&gt;
-&lt;p&gt;CoppeliaSim測試&lt;/p&gt;
 &lt;p&gt;轉換為Inventor檔並組合&lt;/p&gt;
+&lt;p&gt;CoppeliaSim測試&lt;/p&gt;
+&lt;p&gt;PDF製作&lt;/p&gt;
+&lt;p&gt;簡報製作&lt;/p&gt;
 &lt;p&gt;40823110:&lt;/p&gt;
 &lt;p&gt;製圖(Onshape)&lt;/p&gt;
-&lt;p&gt;40823132:&lt;/p&gt;
-&lt;p&gt;PDF製作&lt;/p&gt;</content><category term="Misc"></category><category term="2021FallCD"></category></entry></feed>
+&lt;p&gt;40823132:&lt;/p&gt;</content><category term="Misc"></category><category term="2021FallCD"></category></entry></feed>

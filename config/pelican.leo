@@ -54,7 +54,7 @@
 </v>
 <v t="leo.20170710022054.1"><vh>可以另建節點存放 markdown 目錄下的 md 檔案</vh></v>
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
-<v t="leo.20180115115910.1"><vh>2020</vh>
+<v t="leo.20180115115910.1"><vh>2021</vh>
 <v t="leo.20180423103639.1"><vh>2021 Fall CD 課程</vh>
 <v t="leo.20180423103656.1"><vh>@clean 20210304.md</vh>
 <v t="leo.20210310202212.1"><vh>20210310</vh></v>
@@ -124,9 +124,13 @@ stage1-ag14 發球機
 
 40823125:
 
+轉換為Inventor檔並組合
+
 CoppeliaSim測試
 
-轉換為Inventor檔並組合
+PDF製作
+
+簡報製作
 
 40823110:
 
@@ -134,7 +138,7 @@ CoppeliaSim測試
 
 40823132:
 
-PDF製作</t>
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
