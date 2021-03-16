@@ -19,18 +19,16 @@
 <v t="leo.20200818170041.1"><vh>reveal div</vh>
 <v t="leo.20200818170222.1"><vh>slides div</vh>
 <v t="leo.20200818170328.1"><vh>slide</vh></v>
-<v t="leo.20210310001642.1"><vh>silde1</vh>
+<v t="leo.20210310001642.1"><vh>silde 1</vh>
 <v t="leo.20210310003406.1"><vh>slide 1-1</vh></v>
 <v t="leo.20210309233021.1"><vh>slide 1-2</vh></v>
-<v t="leo.20210309233221.1"><vh>slide 1-3</vh></v>
-<v t="leo.20210309233222.1"><vh>slide 1-4</vh></v>
 </v>
-<v t="leo.20210310201528.1"><vh>slide2</vh>
+<v t="leo.20210310201528.1"><vh>slide 2</vh>
 <v t="leo.20210311212123.1"><vh>slide 2-1</vh></v>
 <v t="leo.20210311212232.1"><vh>slide 2-2</vh></v>
 <v t="leo.20210311212232.2"><vh>slide 2-3</vh></v>
 </v>
-<v t="leo.20210314214617.1"><vh>slide3</vh>
+<v t="leo.20210314214617.1"><vh>slide 3</vh>
 <v t="leo.20210314214625.1"><vh>slide 3-1</vh></v>
 <v t="leo.20210316190941.1"><vh>slide 3-1-1</vh></v>
 <v t="leo.20210316191156.1"><vh>slide 3-1-2</vh></v>
@@ -192,22 +190,12 @@ vertical: body pane on the botton</t>
     @others
 &lt;/div&gt;</t>
 <t tx="leo.20200818170328.1">&lt;section&gt;
-    &lt;h1&gt; 協同產品設計實習&lt;/h1&gt;
-    &lt;h2&gt;40823125&lt;/h2&gt;
+    &lt;h1&gt; 2021-協同產品設計實習-40823125&lt;/h1&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210309233021.1">&lt;section&gt;
     &lt;h2&gt;任務分配:&lt;/h2&gt;
-    &lt;p&gt;40823125:&lt;/p&gt;
-    &lt;p&gt;CoppeliaSim測試&lt;/p&gt;
-    &lt;p&gt;轉換為Inventor檔並組合&lt;/p&gt;
-    &lt;p&gt;簡報製作&lt;/p&gt;
-    &lt;p&gt;PDF製作&lt;/p&gt;
-&lt;/section&gt;</t>
-<t tx="leo.20210309233221.1">&lt;section&gt;
-    &lt;p&gt;40823110:&lt;/p&gt;
-    &lt;p&gt;製圖(Onshape)&lt;/p&gt;
-&lt;/section&gt;</t>
-<t tx="leo.20210309233222.1">&lt;section&gt;
+    &lt;p&gt;40823125:CoppeliaSim測試、轉換為Inventor檔並組合、簡報製作、PDF製作&lt;/p&gt;
+    &lt;p&gt;40823110:製圖(Onshape)&lt;/p&gt;
     &lt;p&gt;40823132:&lt;/p&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210310001642.1">&lt;!-- Example of nested vertical slides --&gt;
@@ -215,9 +203,7 @@ vertical: body pane on the botton</t>
     @others
 &lt;/section&gt;</t>
 <t tx="leo.20210310003406.1">&lt;section&gt;
-    &lt;h1&gt;協同產品設計實習&lt;/h1&gt;
-   &lt;h2&gt;40823125 &lt;/h2&gt;
-   &lt;p&gt;協同題目:發球機&lt;/p&gt;
+&lt;p&gt;協同題目:發球機&lt;/p&gt;
 &lt;p&gt;製作動機:因為我們的組原有一個人是桌球社社長,他想要藉由發球機提供球員自主練習機會。&lt;/p&gt;
 &lt;p&gt;製作規劃:&lt;br&gt;&lt;span&gt;第二周:繪製零件圖並組合。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第三周:用CoppeliaSim測試並修改。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第四周:報告。&lt;/span&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
