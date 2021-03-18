@@ -205,7 +205,7 @@ vertical: body pane on the botton</t>
 &lt;/section&gt;</t>
 <t tx="leo.20210310003406.1">&lt;section&gt;
 &lt;p&gt;協同題目:發球機&lt;/p&gt;
-&lt;p&gt;製作動機:因為我們的組原有一個人是桌球社社長,他想要藉由發球機提供球員自主練習機會。&lt;/p&gt;
+&lt;p&gt;製作動機:因為我們的組員有一個人是桌球社社長,他想要藉由發球機提供球員自主練習機會。&lt;/p&gt;
 &lt;p&gt;製作規劃:&lt;br&gt;&lt;span&gt;第二周:繪製零件圖並組合。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第三周:用CoppeliaSim測試並修改。&lt;/span&gt;&lt;br&gt;&lt;span&gt;第四周:報告。&lt;/span&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 <t tx="leo.20210310201528.1">&lt;section&gt;
