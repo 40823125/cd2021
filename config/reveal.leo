@@ -44,6 +44,7 @@
 <v t="leo.20210316191525.1"><vh>slide 3-5-1</vh></v>
 <v t="leo.20210316192618.1"><vh>slide 3-5-2</vh></v>
 </v>
+<v t="leo.20210318141631.1"><vh>slide 4</vh></v>
 </v>
 </v>
 </v>
@@ -294,6 +295,10 @@ vertical: body pane on the botton</t>
 &lt;/section&gt;</t>
 <t tx="leo.20210316192753.1">&lt;section&gt;
 &lt;p&gt;&lt;iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/fvoF_d6DNsk"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20210318141631.1">&lt;section&gt;
+&lt;h1&gt;PDF報告&lt;/h1&gt;
+&lt;p&gt;&lt;iframe height="550" src="./../downloads/2021-協同產品設計實習-stage1-ag14.pdf" width="1000"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/section&gt;</t>
 </tnodes>
 </leo_file>
