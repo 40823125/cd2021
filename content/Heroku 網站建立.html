@@ -133,15 +133,69 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">第3版 << <a href='第3版.html'>Previous</a> <a href='第5版.html'>Next</a> >> 第5版<br /><h1>第4版</h1>
-<p><marquee behavior="alternate" direction="down" height="35" scrollamount="1"><a href="./../downloads/組合圖-4.stl">組合圖-4.stl</a>|<a href="./../downloads/軸承-4.stl">軸承-4.stl</a></marquee></p>
-<p><a href="https://drive.google.com/file/d/1B8iossbDZBjO3TzLTAwdVh5GZbnrD1Vg/view?usp=sharing">發球機-4.ttt</a></p>
-<p><a href="https://drive.google.com/file/d/1qfLpAu2GxdC1gHiTFI4z8q3CFVKeD7Fy/view?usp=sharing">發球機-4-1.ttt</a></p>
-<p>我們將軸加長後，引球圓盤就可以正常轉動了</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/bHb0nsadlYw" width="560"></iframe></p>
-<p>但是在要將球完整的引導至發球機的軌道裡，會不斷跳動</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Ifhj4b9HIeQ" width="560"></iframe></p>
-<br />第3版 << <a href='第3版.html'>Previous</a> <a href='第5版.html'>Next</a> >> 第5版</div>
+    <div id="tipue_search_content">W7 << <a href='W7.html'>Previous</a> <a href='發球機版本.html'>Next</a> >> 發球機版本<br /><h1>Heroku 網站建立</h1>
+<p><a href="https://stage2-ag12.herokuapp.com/content/index.html">stage2-ag12-heroku網站</a></p>
+<p><strong>1.開通 Heroku 帳號(用學校email建立)</strong></p>
+<p><strong>2.建立一個 Herokuapp</strong></p>
+<p><span><img alt="" height="67" src="https://40823125.github.io/stage2-ag12/images/%7B68C6F089-A793-4C19-B511-A8B3C2DCE5BC%7D.png.jpg" width="500"/></span></p>
+<p><strong>3.從 <a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a> 下載 Heroku cli 程式檔案, 解開至隨身碟 Y: </strong></p>
+<p><span><img alt="" height="290" src="https://40823125.github.io/stage2-ag12/images/%7BFE3C529C-B49F-42FA-B86C-929A8472E38A%7D.png.jpg" width="500"/></span></p>
+<p><strong>4.修改隨身系統的啟動批次檔案start.bat:</strong></p>
+<p><span><img alt="" height="609" src="https://40823125.github.io/stage2-ag12/images/%7B0D3144F0-DFF0-4604-AAF5-C6FB00B9EF3C%7D.png.jpg" width="500"/></span></p>
+<p><strong>5.測試是否能夠在修改後的命令列中執行 heroku.exe, 輸入 heroku version 若回應所使用的版本表示上述路徑設定已經成功</strong></p>
+<p><strong><img alt="" height="63" src="https://40823125.github.io/stage2-ag12/images/1.jpg" width="500"/></strong></p>
+<p><strong>6.有proxy的話，需要<span>在 start_ipv6.bat 中加入:</span></strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_974800">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">REM for heroku login</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">set HTTP_PROXY=http://[2001:288:6004:17::53]:3128</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">set HTTPS_PROXY=http://[2001:288:6004:17::53]:3128</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>7.<span>針對利用 Heroku 同步 Github Pages 上的網站內容</span></strong></p>
+<p><strong><span><img alt="" height="57" src="https://40823125.github.io/stage2-ag12/images/2.jpg" width="500"/></span></strong></p>
+<p><strong><span>8.</span></strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_538450">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># 以 interactive 模式登入 Heroku, 完成後產生 y:\home_ipv6\_netrc</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">heroku login -i</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"># 針對已經登入的 Heroku 帳號下的 app, 設為此倉儲的 remote 同步倉儲, 且在倉儲中會自建名稱為 heroku 的 remoate site.</code></div>
+<div class="line number4 index3 alt1"><code class="html plain">heroku git:remote -a 名稱</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img alt="" height="261" src="https://40823125.github.io/stage2-ag12/images/Inked%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202021-04-01%20170231_LI.jpg" width="500"/></p>
+<br />W7 << <a href='W7.html'>Previous</a> <a href='發球機版本.html'>Next</a> >> 發球機版本</div>
         
     <!-- footer -->
       <div class="container">
