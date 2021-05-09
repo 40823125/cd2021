@@ -134,20 +134,116 @@
 <p><strong>協同報告</strong></p>
 <p><a href="https://40823153.github.io/stage2-ag12/downloads/2021-協同產品設計實習-stage2-ag12.pdf">2021-協同產品設計實習-stage2-ag12.pdf</a></p>
 <h1>stage3-ag6</h1>
-<p></p>
-<p>組長:<a href="https://github.com/40823152/stage3-ag6">40823152 repo</a><span> | </span><a href="https://40823152.github.io/stage3-ag6/content/index.html">40823152 site</a><span> |</span></p>
+<p><a href="https://40823125.github.io/stage3-ag6">stage3-ag6 repo<span></span></a> | <a href="https://40823125.github.io/stage3-ag6/content/index.html">stage3-ag6 site</a><span> </span>|</p>
+<p>組長:<a href="https://github.com/40823152/cd2021">40823152 repo</a><span> | </span><a href="https://40823152.github.io/cd2021/content/index.html">40823152 site</a><span> |</span></p>
 <p>組員:</p>
-<p><a href="https://github.com/40823110/stage3-ag6">40823110 repo</a><span> | </span><a href="https://40823110.github.io/stage3-ag6/content/index.html">40823110 site</a><span> </span>|</p>
-<p><span><span></span></span><a href="https://github.com/40823125/stage3-ag6">40823125 repo</a><span><a href="https://github.com/40823125/stage3-ag6"><span> </span></a>|<span> </span></span><a href="https://40823125.github.io/stage3-ag6/content/index.html">40823125 site</a><span><span> </span>|</span></p>
-<p><span></span><a href="https://github.com/40823153/stage3-ag6">40823153 repo</a><span><span> </span>|<span> </span></span><a href="https://40823153.github.io/stage3-ag6/content/index.html">40823153 site</a><span><a href="https://40823153.github.io/stage3-ag6/content/index.html"><span> </span></a>|</span></p>
-<p><span><a href="https://github.com/40823117/stage3-ag6">40823117 repo<span> </span></a>|<span> </span><a href="https://40823117.github.io/stage3-ag6/content/index.html">40823117 site</a><span> </span>|</span></p>
-<p><span><a href="https://github.com/40823122/stage3-ag6">40823122 repo<span> </span></a>|<span> </span><a href="https://40823122.github.io/stage3-ag6/content/index.html">40823122 site</a><span> </span>|</span></p>
-<p><span><a href="https://github.com/40823129/stage3-ag6">40823129 repo<span> </span></a>|<span> </span><a href="https://40823129.github.io/stage3-ag6/content/index.html">40823129 site</a><span> </span>|</span></p>
-<p><span><a href="https://github.com/40823149/stage3-ag6">40823149 repo<span> </span></a>|<span> </span><a href="https://40823149.github.io/stage3-ag6/content/index.html">40823149 site<span> </span></a>|</span></p><h2>W10</h2>
-<h2>W11</h2>
+<p><a href="https://github.com/40823110/cd2021">40823110 repo</a><span> | </span><a href="https://40823110.github.io/cd2021/content/index.html">40823110 site</a><span> </span>|</p>
+<p><span><span></span></span><a href="https://github.com/40823125/cd2021">40823125 repo</a><span>|<span> </span></span><a href="https://40823125.github.io/cd2021/content/index.html">40823125 site</a><span><span> </span>|</span></p>
+<p><span></span><a href="https://github.com/40823153/cd2021">40823153 repo</a><span><span> </span>|<span> </span></span><a href="https://40823153.github.io/cd2021/content/index.html">40823153 site</a><span><a href="https://40823153.github.io/cd2021/content/index.html"><span> </span></a>|</span></p>
+<p><span><a href="https://github.com/40823117/cd2021">40823117 repo<span> </span></a>|<span> </span><a href="https://40823117.github.io/cd2021/content/index.html">40823117 site</a><span> </span>|</span></p>
+<p><span><a href="https://github.com/40823122/cd2021">40823122 repo<span> </span></a>|<span> </span><a href="https://40823122.github.io/cd2021/content/index.html">40823122 site</a><span> </span>|</span></p>
+<p><span><a href="https://github.com/40823129/cd2021">40823129 repo<span> </span></a>|<span> </span><a href="https://40823129.github.io/cd2021/content/index.html">40823129 site</a><span> </span>|</span></p>
+<p><span><a href="https://github.com/40823149/cd2021">40823149 repo<span> </span></a>|<span> </span><a href="https://40823149.github.io/cd2021/content/index.html">40823149 site<span> </span></a>|</span></p>
+<h2>task 1</h2>
+<p>讀取 <a href="https://drive.google.com/file/d/1HETcW6z9bweibVH37jiziNbT71E8dgVU/view?usp=sharing">stage3_2a.txt</a>, 建立 Stage3 的分組倉儲, 分組網頁, 以及各組員倉儲及網頁連結.</p>
+<p><strong>老師的範例</strong>:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># open file, default is read mode, since txt content no chinese char
+# no encoding = "UTF-8" is needed
+with open("stage3_2a.txt") as fh:
+    # readlines will read into the whole line and put into list format
+    # has \n at the end of each line
+    data = fh.readlines()
+#print(len(data))
+for i in range(len(data)):
+    group = data[i].rstrip("\n").split("\t")
+    print(group)
+# the following will use group data to generate needed html</pre>
+<p><strong>第一版</strong>:將學號按組別排好</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open("stage3_2a.txt") as fh:
+   #先將我們存起來stage3_2a.txt打開並命名為fh
+    data = fh.readlines()
+    #將stage3_2a.txt的資料以串列形式存為data
+for i in range(len(data)):
+    group = data[i].rstrip("\n").split("\t")
+    #先取出data list中的第i項,消除元素中/n,再以\t取出需要的文字
+    print(group[0]+group[0])
+    #先將group第0列推出
+    for j in range(1,18,1):
+    #設一個範圍,(1到18,每次加1,1&lt;=j&lt;18)
+        try:
+            print(group[j])
+        except:
+           continue
+        #這邊使用try.....except,因為有一組6個人,導致有空格,所以需要用continue讓迴圈繼續跑</pre>
+<p><strong>第二版</strong>:將40823122的學號修正</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open("stage3_2a.txt") as fh:
+   #先將我們存起來stage3_2a.txt打開並命名為fh
+    data = fh.readlines()
+    #將stage3_2a.txt的資料以串列形式存為data
+for i in range(len(data)):
+    newdata = data[i].replace('4823122','40823122')
+    #因為40823122的學號打錯了,所以用 replace 把舊的替換成新的
+    group = newdata.rstrip("\n").split("\t")
+    #先取出newdata list中的第i項,消除元素中/n,再以\t取出需要的文字
+    print(group[0]+group[0])
+    #先將group第0列推出
+    for j in range(1,18,1):
+    #設一個範圍,(1到18,每次加1,1&lt;=j&lt;18)
+        try:
+            print(group[j])
+        except:
+           continue
+        #這邊使用try.....except,因為有一組6個人,導致有空格,所以需要用continue讓迴圈繼續跑</pre>
+<p><strong>第三版</strong>:以網頁的形式推出,但會告知</p>
+<p>print('&lt;p&gt;'+group[0]+' | &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;Website&lt;/a&gt; | &lt;a href="https://github.com/'+group[2]+'/'+group[0]+'"&gt;Repository&lt;/a&gt;&lt;/p&gt;')<br/>IndexError: list index out of range</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open("stage3_2a.txt") as fh:
+   #先將我們存起來stage3_2a.txt打開並命名為fh
+    data = fh.readlines()
+    #將stage3_2a.txt的資料以串列形式存為data
+for i in range(len(data)):
+    newdata = data[i].replace('4823122','40823122')
+    #因為40823122的學號打錯了,所以用 replace 把舊的替換成新的
+    group = newdata.rstrip("\n").split("\t")
+    #先取出newdata list中的第i項,消除元素中/n,再以\t取出需要的文字
+    print('&lt;p&gt;'+group[0]+' | &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;Website&lt;/a&gt; | &lt;a href="https://github.com/'+group[2]+'/'+group[0]+'"&gt;Repository&lt;/a&gt;&lt;/p&gt;')
+    for j in range(1,18,1):
+    #設一個範圍,(1到18,每次加1,1&lt;=j&lt;18)
+        try:
+            print('&lt;p&gt;'+group[j]+' | Website:'+'&lt;a href="https://'+group[j]+'.github.io/cd2021'+'"&gt;'+group[j]+'&lt;/a&gt;'+' | Repository:'+'&lt;a href="https://github.com/'+group[j]+'/cd2021'+'"&gt;'+group[j]+'&lt;/a&gt; &lt;/p&gt;')
+        except:
+           continue
+        #這邊使用try.....except,因為有一組6個人,導致有空格,所以需要用continue讓迴圈繼續跑</pre>
+<p><strong>第四版</strong>:將a40823112修正</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open("stage3_2a.txt") as fh:
+   #先將我們存起來stage3_2a.txt打開並命名為fh
+    data = fh.readlines()
+    #將stage3_2a.txt的資料以串列形式存為data
+for i in range(len(data)):
+    newdata1 = data[i].replace('4823122','40823122')
+    #因為40823122的學號打錯了,所以用 replace 把舊的替換成新的
+    newdata2 = newdata1.replace('\t\t','')
+    #因為有一組只有6人,所以用 replace 把空位刪除
+    group = newdata2.rstrip("\n").split("\t")
+    #先取出newdata list中的第i項,消除元素中/n,再以\t取出需要的文字
+    print('&lt;p&gt;'+group[0]+' | &lt;a href="https://'+group[1]+'.github.io/'+group[0]+'"&gt;Website&lt;/a&gt; | &lt;a href="https://github.com/'+group[2]+'/'+group[0]+'"&gt;Repository&lt;/a&gt;&lt;/p&gt;')
+    for j in range(1,18,1):
+    #設一個範圍,(1到18,每次加1,1&lt;=j&lt;18)
+        try:
+            n = group[j].replace('a40823112','40823112')
+            print('&lt;p&gt;'+group[j]+' | Website:'+'&lt;a href="https://'+group[j]+'.github.io/cd2021'+'"&gt;'+n+'&lt;/a&gt;'+' | Repository:'+'&lt;a href="https://github.com/'+group[j]+'/cd2021'+'"&gt;'+n+'&lt;/a&gt; &lt;/p&gt;')
+        except:
+           continue
+        #這邊使用try.....except,因為有一組6個人,導致有空格,所以需要用continue讓迴圈繼續跑</pre>
+<p>參考資料:</p>
+<p><a href="https://docs.python.org/zh-tw/3/tutorial/controlflow.html#the-range-function">python 語法 renge</a></p>
+<p><a href="https://edu.tcfst.org.tw/edm/08C009/images/Python%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95.pdf">python 基本語法</a></p>
+<p><a href="https://www.w3schools.com/python/python_lists_loop.asp">python loop 原理</a></p>
+<p><a href="https://40823136.github.io/cd2021/content/task1.html">40823136 Website</a></p>
+<h3>stage3-2a</h3><h2>task 2</h2>
 <p>remote API 操作測試</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WUDqe6oSfwo" width="560"></iframe></p>
-<p>目前在用2W1a.ttt時沒辦法使用老師給的內部IP 192.168.192.1+組別+排序別,進行連線</p><h1>Error exclude</h1><h2>協同失誤</h2>
+<p>目前在用2W1a.ttt時沒辦法使用老師給的內部IP 192.168.192.1+組別+排序別,進行連線</p><h1>Error exclude</h1>
+<h2>協同失誤</h2>
 <p>在協同時因為組員們的倉儲版本不同導致無法推送</p>
 <p><img alt="" height="113" src="https://localhost:8444/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202021-04-13%20194559.jpg" width="500"/></p>
 <p>最後我們只好將版本不同的倉儲刪掉重新協同</p>
@@ -221,7 +317,8 @@
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/fPKHOBXYZwY" width="560"></iframe></p>
 <h4><strong>有框版</strong></h4>
 <p><img alt="" height="236" src="https://40823125.github.io/cd2021/images/2.2-4.jpg" width="500"/></p>
-<p><img alt="" height="238" src="https://40823125.github.io/cd2021/images/2.2-5.jpg" width="500"/></p><h3>2.3</h3>
+<p><img alt="" height="238" src="https://40823125.github.io/cd2021/images/2.2-5.jpg" width="500"/></p>
+<h3>2.3</h3>
 <p><a href="https://drive.google.com/drive/folders/1gVL4FmbeqfpH1UVUGS85cwdQSOvvy683?usp=sharing">籃球機2.3</a></p>
 <p><img alt="" height="238" src="/images/2.3-1.jpg" width="500"/></p>
 <p><img alt="" height="238" src="/images/2.3-2.jpg" width="500"/></p>
@@ -242,4 +339,6 @@
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/w2pv5GlT988" width="560"></iframe></p>
 <p><strong>2.4.3</strong></p>
 <p>擊球桿新增後轉功能，可以有效控制擊球的時機。</p>
-<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/R4FlyPlJxqw" width="560"></iframe></p></div></div>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/R4FlyPlJxqw" width="560"></iframe></p>
+</div>
+</div>
