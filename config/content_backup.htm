@@ -274,8 +274,6 @@ for i in range(6):
     #因為40823122的學號打錯了,所以用 replace 把舊的替換成新的
     newdata2 = newdata1.replace('\t\t','')
     #因為有一組只有6人,所以用 replace 把空位刪除
-    newdata3 = newdata2.replace('_','-')
-    #因為在編輯txt的時候-會變成_,所以用 replace 把_修正為-
     group = newdata3.rstrip("\n").split("\t")
     #先取出newdata list中的第i項,消除元素中/n,再以\t取出需要的文字
     print('&lt;p&gt;&lt;a href="https://github.com/'+group[1]+'/'+group[0]+'"&gt;'+group[0]+' repo&lt;/a&gt; | &lt;a href="https://'+group[2]+'.github.io/'+group[0]+'"&gt;'+group[0]+' site&lt;/a&gt;&lt;/p&gt;')
