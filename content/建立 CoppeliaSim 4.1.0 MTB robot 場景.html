@@ -133,7 +133,79 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">task 2 << <a href='task 2.html'>Previous</a> <a href='gogs操作.html'>Next</a> >> gogs操作<br /><h1>W13</h1><br />task 2 << <a href='task 2.html'>Previous</a> <a href='gogs操作.html'>Next</a> >> gogs操作</div>
+    <div id="tipue_search_content">MTB Onshape << <a href='MTB Onshape.html'>Previous</a> <a href='手臂末端加入 components-gripper-suction pad 吸盤.html'>Next</a> >> 手臂末端加入 components-gripper-suction pad 吸盤<br /><h1>建立 CoppeliaSim 4.1.0 MTB robot 場景</h1>
+<p><a href="https://drive.google.com/file/d/1pPJDg7sdJ18824N8fK2_T6d65vcoOHPp/view?usp=sharing">W16_exam_MTB_robot keyboard.7z</a></p>
+<p>使用老師w15的鍵盤控制，使自己組裝完的MTB_robot可以鍵盤控制。並利用 Leo Editor 以 require 導入 Lua 程式運作</p>
+<p><strong>Lua 程式:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+     axis1=sim.getObjectHandle('MTB_axis1')
+     axis2=sim.getObjectHandle('MTB_axis2')
+     axis3=sim.getObjectHandle('MTB_axis3')
+     axis4=sim.getObjectHandle('MTB_axis4')     
+     rotation1 = 0
+     rotation2 = 0
+     distance3 = 0
+    -- Do some initial settings here
+    -- Get object handle
+      
+     deg = math.pi/180
+     --sim.sJointTargetVelocity(joint,5.5)
+     
+end
+ 
+function sysCall_actuation()
+ calibration = 0.01
+ message,auxiliaryData=sim.getSimulatorMessage()
+ if (message==sim.message_keypress) then
+      print(auxiliaryData[1])--key
+      if (auxiliaryData[1]==string.byte(' ')) then
+      end
+       --Display keyboard key code
+      if (auxiliaryData[1]==97) then--a
+      rotation1 = rotation1 + 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      -- Press the "a" key to turn axis1 5 degrees counterclockwise
+      if (auxiliaryData[1]==100) then --d
+      rotation1 = rotation1 - 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      -- Press the "d" key to turn axis1 5 degrees clockwise
+      if (auxiliaryData[1]==119) then--w
+      rotation2 = rotation2 + 5*deg
+      sim.setJointPosition(axis2, rotation2)
+      end
+      -- Press the "w" key to turn axis2 5 degrees counterclockwise
+      if (auxiliaryData[1]==115) then --s
+      rotation2 = rotation2 - 5*deg
+      sim.setJointPosition(axis2, rotation2)
+      end
+      -- Press the "s" key to turn axis2 5 degrees clockwise
+      if (auxiliaryData[1]==113) then --q
+      distance3 = distance3 + calibration
+      sim.setJointPosition(axis3, distance3)
+      end
+      -- Press the "q" key to move down 0.01
+      if (auxiliaryData[1]==101) then --e
+      distance3 = distance3 - calibration
+      sim.setJointPosition(axis3, distance3)
+      end
+      -- Press the "e" key to move up 0.01
+      
+ end   
+ 
+end
+function sysCall_sensing()
+    -- put your sensing code here
+    
+end
+ 
+function sysCall_cleanup()
+    -- do some clean-up here
+    
+end
+ 
+</pre><br />MTB Onshape << <a href='MTB Onshape.html'>Previous</a> <a href='手臂末端加入 components-gripper-suction pad 吸盤.html'>Next</a> >> 手臂末端加入 components-gripper-suction pad 吸盤</div>
         
     <!-- footer -->
       <div class="container">
