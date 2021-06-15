@@ -133,12 +133,87 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">個人簡介 << <a href='個人簡介.html'>Previous</a> <a href='W1.html'>Next</a> >> W1<br /><h1>Stage1-ag14</h1>
-<p><strong>倉儲</strong>:</p>
-<p><a href="https://github.com/40823125/stage1-ag14"><img alt="" height="210" src="./../images/github-mark.png" width="400"/><span></span></a> </p>
-<p><strong>網站</strong>:</p>
-<p><a href="https://40823125.github.io/stage1-ag14/content/index.html"><img alt="" height="175" src="./../images/refine_facebook-1200x630.png" width="400"/></a></p>
-<br />個人簡介 << <a href='個人簡介.html'>Previous</a> <a href='W1.html'>Next</a> >> W1</div>
+    <div id="tipue_search_content">W16_exam_MTB_robot keyboard << <a href='W16_exam_MTB_robot keyboard.html'>Previous</a> <br /><h1>W16_exam_MTB_robot keyboard add suction pad</h1>
+<p>接續MTB Robot keyboard, 在其抓物品的桿件上加suction pad</p>
+<p><a href="https://drive.google.com/file/d/1Lgcm7BsRsACxg3j7cqFv4ilPuhzzKFG-/view?usp=sharing">W16_exam_MTB_robot keyboard add suction pad.7z</a></p>
+<p><strong>Lua程式:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+     axis1=sim.getObjectHandle('MTB_axis1')
+     axis2=sim.getObjectHandle('MTB_axis2')
+     axis3=sim.getObjectHandle('MTB_axis3')
+     axis4=sim.getObjectHandle('MTB_axis4') 
+     suctionPad=sim.getObjectHandle('suctionPad')     
+     rotation1 = 0
+     rotation2 = 0
+     distance3 = 0
+    -- Do some initial settings here
+    -- Get object handle
+      
+     deg = math.pi/180
+     --sim.sJointTargetVelocity(joint,5.5)
+     
+end
+ 
+function sysCall_actuation()
+ calibration = 0.01
+ message,auxiliaryData=sim.getSimulatorMessage()
+ if (message==sim.message_keypress) then
+      print(auxiliaryData[1])--key
+      if (auxiliaryData[1]==string.byte(' ')) then
+      end
+       --Display keyboard key code
+      if (auxiliaryData[1]==97) then--a
+      rotation1 = rotation1 + 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      -- Press the "a" key to turn axis1 5 degrees counterclockwise
+      if (auxiliaryData[1]==100) then --d
+      rotation1 = rotation1 - 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      -- Press the "d" key to turn axis1 5 degrees clockwise
+      if (auxiliaryData[1]==119) then--w
+      rotation2 = rotation2 + 5*deg
+      sim.setJointPosition(axis2, rotation2)
+      end
+      -- Press the "w" key to turn axis2 5 degrees counterclockwise
+      if (auxiliaryData[1]==115) then --s
+      rotation2 = rotation2 - 5*deg
+      sim.setJointPosition(axis2, rotation2)
+      end
+      -- Press the "s" key to turn axis2 5 degrees clockwise
+      if (auxiliaryData[1]==113) then --q
+      distance3 = distance3 + calibration
+      sim.setJointPosition(axis3, distance3)
+      end
+      -- Press the "q" key to move down 0.01
+      if (auxiliaryData[1]==101) then --e
+      distance3 = distance3 - calibration
+      sim.setJointPosition(axis3, distance3)
+      end
+      -- Press the "e" key to move up 0.01
+      if (auxiliaryData[1]==122) then --z 
+sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
+      end -- Press "z" key to activate the suction pad
+      if (auxiliaryData[1]==120) then --x
+sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
+      end -- Press "x" key to deactivate the suction pad
+      
+ end   
+ 
+end
+function sysCall_sensing()
+    -- put your sensing code here
+    
+end
+ 
+function sysCall_cleanup()
+    -- do some clean-up here
+    
+end
+ 
+</pre>
+<p></p></div></div><br />W16_exam_MTB_robot keyboard << <a href='W16_exam_MTB_robot keyboard.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
