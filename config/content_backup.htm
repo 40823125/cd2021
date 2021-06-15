@@ -746,8 +746,10 @@ for i in range(6):
 <p><a href="https://drive.google.com/drive/folders/1LtZeg5P2-S43Ac6AlJrfnSzVOzQI9a3S?usp=sharing">MTB_Robot stl檔</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zQT-bwMZL9A" width="560"></iframe></p>
 <h3>建立 CoppeliaSim 4.1.0 MTB robot 場景</h3>
-<p><a href="https://drive.google.com/file/d/1pPJDg7sdJ18824N8fK2_T6d65vcoOHPp/view?usp=sharing">W16_exam_MTB_robot keyboard.7z</a></p>
 <p>使用老師w15的鍵盤控制，使自己組裝完的MTB_robot可以鍵盤控制。並利用 Leo Editor 以 require 導入 Lua 程式運作</p>
+<p><a href="https://github.com/mdecourse/cd2021/tree/main/downloads/stage3/MTB_robot">老師的leo</a></p>
+<p><a href="https://drive.google.com/file/d/1zk2AiK_IjJdSPRHD9k4WU-Mr8kNH6IoJ/view?usp=sharing">W16_exam_MTB_robot keyboard.7z</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/wPo3JFRofF0" width="560"></iframe></p>
 <p><strong>Lua 程式:</strong></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
      axis1=sim.getObjectHandle('MTB_axis1')
@@ -817,9 +819,10 @@ function sysCall_cleanup()
     
 end
  
-</pre><h3 style="padding-left: 30px;">手臂末端加入 components-gripper-suction pad 吸盤</h3>
+</pre><h3>手臂末端加入 components-gripper-suction pad 吸盤</h3>
 <p>接續MTB Robot keyboard, 在其抓物品的桿件上加suction pad</p>
-<p><a href="https://drive.google.com/file/d/1Lgcm7BsRsACxg3j7cqFv4ilPuhzzKFG-/view?usp=sharing">W16_exam_MTB_robot keyboard add suction pad.7z</a></p>
+<p><a href="https://drive.google.com/file/d/18g-diZcB7OOce-bCbxj5UJYWtZ2a4Aq_/view?usp=sharing">W16_exam_MTB_robot keyboard add suction pad.7z</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/3bXMnqghFik" width="560"></iframe></p>
 <p><strong>Lua程式:</strong></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
      axis1=sim.getObjectHandle('MTB_axis1')
@@ -897,4 +900,96 @@ function sysCall_cleanup()
 end
  
 </pre>
-<p></p></div></div>
+<p></p><h3>逆向運動學函式</h3>
+<p><span>使用老師的逆運動學函式求出終點位置的位移，使MTB_robot在coppeliasim裡可以順利達到老師要求的位置</span></p>
+<p><span><a href="https://drive.google.com/file/d/18gWlnhcRQj3uRjgt2QCEbnUu60jNp4Sr/view?usp=sharing">MTB_force mode.7z</a></span></p>
+<p><strong>Mtb_robot_keyboard:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    -- do some initialization here
+     axis1=sim.getObjectHandle('MTB_axis1')
+     axis1=sim.getObjectHandle('MTB_axis1')
+     axis2=sim.getObjectHandle('MTB_axis2')
+     axis3=sim.getObjectHandle('MTB_axis3')
+     axis4=sim.getObjectHandle('MTB_axis4')
+     suctionPad=sim.getObjectHandle('suctionPad')     
+     rotation1 = 0
+     distance3 = 0
+     
+     deg = math.pi/180
+function ik(x, y)
+    theta = ik(0.2, 0.7)
+    theta = ik(-0.3, -0.55)
+    -- (x, y) need to be located inside the circle with radius a1+a2
+    if (x^2 + y^2) &lt;= (a1+ a2)^2 then
+        q2 = math.acos((x^2+y^2-a1^2-a2^2)/(2*a1*a2))
+        q1 = math.atan2(y, x) - math.atan2((a2*math.sin(q2)), (a1+a2*math.cos(q2)))
+        return {round(q1*deg, 4), round(q2*deg, 4)}
+    end
+    print(theta[1], theta[2])
+  
+end   
+     
+    
+     
+
+end
+function sysCall_actuation()
+ calibration = 0.004
+ message,auxiliaryData=sim.getSimulatorMessage()
+ if (message==sim.message_keypress) then
+      print(auxiliaryData[1])--key
+      if (auxiliaryData[1]==string.byte(' ')) then
+      end
+      if (auxiliaryData[1]==97) then--a
+      rotation1 = rotation1 + 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      if (auxiliaryData[1]==100) then --d
+      rotation1 = rotation1 - 5*deg
+      sim.setJointPosition(axis1, rotation1)
+      end
+      if (auxiliaryData[1]==119) then --w
+      distance3 = distance3 + 0.01 + calibration
+      sim.setJointPosition(axis3, distance3)
+      end 
+      if (auxiliaryData[1]==115) then --s
+      distance3 = distance3 - 0.01 - calibration
+      sim.setJointPosition(axis3, distance3)
+      end
+      if (auxiliaryData[1]==112) then --p activate the suction pad
+sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
+      end -- if p
+      if (auxiliaryData[1]==113) then --q deactivate the suction pad
+sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
+      end -- if q
+      if (auxiliaryData[1]==49) then --1
+      V1=43.9242*deg
+      V2=66.007*deg
+      sim.setJointPosition(axis1, V1)
+      sim.setJointPosition(axis2, V2)
+      print(0.2,0.7)
+      end
+      if (auxiliaryData[1]==50) then --2
+      V1=-158.2529*deg
+      V2=87.7894*deg
+      sim.setJointPosition(axis1, V1)
+      sim.setJointPosition(axis2, V2)
+      print(-0.3,0.55)
+      end
+
+      
+  
+ end    
+
+
+end
+
+function sysCall_sensing()
+    -- put your sensing code here
+end
+function sysCall_cleanup()
+    -- do some clean-up here
+end
+</pre>
+<p></p><h3>Python remote API 逆向運動學函式</h3>
+<p>利用 Python remote API 程式重現以迴圈方式執行 W15 兩個指定位置之方塊取放</p></div></div>
