@@ -592,7 +592,13 @@ for i in range(6):
 <p><a href="https://blog.csdn.net/Csdn_Darry/article/details/107142216"><span style="font-weight: 400;">CoppeliaSim 用户手册</span></a></p>
 <p><span style="font-weight: 400;"><a href="https://www.youtube.com/watch?v=MX3VXvZFk0U">Robotics Simulation: CoppeliaSim, from the Creators of V-REP</a></span></p>
 <p><a href="https://www.youtube.com/watch?v=CVoV08T0Aqo">Pick and place application with KUKA KR16 robot using v-rep (CoppeliaSim) and Matlab</a></p><h2>W15</h2>
-<h3>Inverse kinematics for a 2-joint robot arm using geometry</h3>
+<h3>fossil 教學</h3>
+<p>進入<a href="https://fossil.kmol.info:9443/">https://fossil.kmol.info:9443</a> 登入學校email</p>
+<p>在Y:\tmp\fossil&gt;下clone連結</p>
+<p><img alt="" height="46" src="/images/螢幕擷取畫面 2021-06-16 201019.jpg" width="500"/></p>
+<p>https://fossil.kmol.info/u/倉儲名稱/home</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil clone https://倉儲名稱@fossil.kmol.info/u/倉儲名稱 倉儲名稱.fossil</pre>
+<p></p><h3>Inverse kinematics for a 2-joint robot arm using geometry</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/IKOGwoJ2HLk" width="560"></iframe></p>
 <p>We saw this simple two-link robot in the previous lecture about forward kinematics.</p>
 <p>我們在上一堂關於正向運動學的講座中看到了這個簡單的雙連桿機構。</p>
@@ -1420,6 +1426,7 @@ end
 </pre>
 <p></p><h3>Python remote API 逆向運動學函式</h3>
 <p>利用 Python remote API 程式重現以迴圈方式執行 W15 兩個指定位置之方塊取放</p>
+<p><a href="https://drive.google.com/file/d/1Lmx1AkJ0_3FnF5H9t0u4TGdUgGffIoD4/view?usp=sharing">MTB_Python remote API.7z</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/AkSXQKHoCms" width="560"></iframe></p>
 <p>remote_api.py:</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sim as vrep
@@ -1517,7 +1524,7 @@ if clientID != -1:
 else:
     print ('Failed connecting to remote API server')
     print ('End')</pre>
-<p><span></span>吸盤程式(使用<a href="https://40823214.github.io/cd2021/content/index.html">40823214</a>的程式):</p>
+<p><span>從<a href="https://40823246.github.io/cd2021/content/w16.html">40823246</a>得知的</span>吸盤程式(<a href="https://40823214.github.io/cd2021/content/index.html">40823214</a>的程式):</p>
 <div>
 <div class="syntaxhighlighter lua" id="highlighter_131059">
 <table border="0" cellpadding="0" cellspacing="0">
