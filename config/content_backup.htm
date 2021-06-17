@@ -570,6 +570,7 @@ for i in range(6):
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WUDqe6oSfwo" width="560"></iframe></p>
 <p>目前在用2W1a.ttt時沒辦法使用老師給的內部IP 192.168.192.1+組別+排序別,進行連線</p>
 <h2>W13</h2><h3>gogs操作</h3>
+<p>倉儲:<a href="https://fossil.kmol.info:3443/40823125/cd2021">https://fossil.kmol.info:3443/40823125/cd2021</a></p>
 <p>1.先用<a href="https://fossil.kmol.info:3443">https://fossil.kmol.info:3443</a>創新倉儲，與github倉儲相同的名稱</p>
 <p><img alt="" height="257" src="/images/螢幕擷取畫面 2021-06-03 154013.jpg" width="500"/></p>
 <p><img alt="" height="389" src="/images/螢幕擷取畫面 2021-06-03 154052.jpg" width="500"/></p>
@@ -593,11 +594,27 @@ for i in range(6):
 <p><span style="font-weight: 400;"><a href="https://www.youtube.com/watch?v=MX3VXvZFk0U">Robotics Simulation: CoppeliaSim, from the Creators of V-REP</a></span></p>
 <p><a href="https://www.youtube.com/watch?v=CVoV08T0Aqo">Pick and place application with KUKA KR16 robot using v-rep (CoppeliaSim) and Matlab</a></p><h2>W15</h2>
 <h3>fossil 教學</h3>
+<p><a href="https://fossil.kmol.info/u/40823125/dir?ci=tip">倉儲</a> | <a href="https://fossil.kmol.info/u/40823125/doc/trunk/content/index.html">網頁</a></p>
 <p>進入<a href="https://fossil.kmol.info:9443/">https://fossil.kmol.info:9443</a> 登入學校email</p>
 <p>在Y:\tmp\fossil&gt;下clone連結</p>
 <p><img alt="" height="46" src="/images/螢幕擷取畫面 2021-06-16 201019.jpg" width="500"/></p>
 <p>https://fossil.kmol.info/u/倉儲名稱/home</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil clone https://倉儲名稱@fossil.kmol.info/u/倉儲名稱 倉儲名稱.fossil</pre>
+<p>建立wd和cd2021的資料夾</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">mkdir wd
+mkdir cd2021
+cd wd\cd2021
+fossil open ./../../倉儲名稱 .fossil
+在cd2021開啟倉儲名稱 .fossil</pre>
+<p>推送</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil add .
+只有新增物件時用
+fossil addremove
+有刪除物件時用</pre>
+<p><img alt="" height="61" src="/images/螢幕擷取畫面 2021-06-16 195630.jpg" width="500"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil commit -m "推送名稱"</pre>
+<p>開啟網頁的連結</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">https://fossil.kmol.info/u/倉儲名稱/doc/trunk/index.html</pre>
 <p></p><h3>Inverse kinematics for a 2-joint robot arm using geometry</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/IKOGwoJ2HLk" width="560"></iframe></p>
 <p>We saw this simple two-link robot in the previous lecture about forward kinematics.</p>
