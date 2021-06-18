@@ -767,7 +767,7 @@ fossil addremove
 <p><strong>看完影片後得知:</strong></p>
 <p><span><img alt="" height="225" src="/images/螢幕擷取畫面 2021-06-10 173704.jpg" width="500"/></span></p>
 <h2>W16</h2>
-<h3>MTB Onshape</h3>
+<p><a href="https://40823152.gitlab.io/cd2021/content/W16.html">參考資料</a></p><h3>MTB Onshape</h3>
 <p><a href="https://cad.onshape.com/documents/c87d57ce9bd18d98c0e6db80/w/db61257b17da434d6db8c693/e/fb5500c4216b7c97973be646">Onshape MTB_Robot</a></p>
 <p><a href="https://drive.google.com/drive/folders/1LtZeg5P2-S43Ac6AlJrfnSzVOzQI9a3S?usp=sharing">MTB_Robot stl檔</a></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zQT-bwMZL9A" width="560"></iframe></p>
@@ -1456,6 +1456,7 @@ import time
 import keyboard
  
  
+
 print ('Start')
  
 # Close eventual old connections
@@ -1483,8 +1484,10 @@ if clientID != -1:
     # link 2 length
     a2 = 0.4
     # derivated based up https://www.youtube.com/watch?v=IKOGwoJ2HLk&amp;t=311s
-      
+    
     def ik(x, y):
+        x = 0
+    y = 0
     # (x, y)  need to be located inside the circle with radius a1+a2
        if (x**2 + y**2) &lt;= (a1+ a2)**2:
           q2 = math.acos((x**2+y**2-a1**2-a2**2)/(2*a1*a2))
@@ -1497,17 +1500,18 @@ if clientID != -1:
 
  
     theta = ik(0.2, 0.7)
- 
+    
     print(theta[0], theta[1])
-
 
     ret,axis1=vrep.simxGetObjectHandle(clientID,"MTB_axis1",opmode)
     ret,axis2=vrep.simxGetObjectHandle(clientID,"MTB_axis2",opmode)
     ret,axis3=vrep.simxGetObjectHandle(clientID,"MTB_axis3",opmode)
-    ret,suctionPad=vrep.simxGetObjectHandle(clientID,"suctionPad",opmode)
+    #Define basic values
     vrep.simxSetJointTargetPosition(clientID,axis1,theta[0]*angle1,opmode)
     vrep.simxSetJointTargetPosition(clientID,axis2,theta[1]*angle1,opmode)
+    #Define the position of the axis
     vrep.simxSetIntegerSignal(clientID,"pad_switch",1,opmode)
+    #Use remote_API to output the defined value to the suction cup in coppilaSim for action
     time.sleep(0.5)
     while True:
             vrep.simxSetJointPosition(clientID,axis3,-0.03,opmode)
@@ -1518,6 +1522,7 @@ if clientID != -1:
             vrep.simxSetJointPosition(clientID,axis3,0.01,opmode)
             vrep.simxSetJointPosition(clientID,axis1,theta[0]*angle1,opmode)
             vrep.simxSetJointPosition(clientID,axis2,theta[1]*angle1,opmode)
+            print(theta[0],theta[1])
             time.sleep(2)
             vrep.simxSetIntegerSignal(clientID,"pad_switch",0,opmode)
             time.sleep(0.5)
@@ -1531,6 +1536,7 @@ if clientID != -1:
             vrep.simxSetJointPosition(clientID,axis3,0.01,opmode)
             vrep.simxSetJointPosition(clientID,axis1,theta[0]*angle1,opmode)
             vrep.simxSetJointPosition(clientID,axis2,theta[1]*angle1,opmode)
+            print(theta[0],theta[1])
             time.sleep(2)
             vrep.simxSetIntegerSignal(clientID,"pad_switch",0,opmode)
             time.sleep(0.5)
@@ -1544,228 +1550,121 @@ if clientID != -1:
 else:
     print ('Failed connecting to remote API server')
     print ('End')</pre>
+<p><strong>主程式:</strong></p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- Put some initialization code here:
+sim.setThreadSwitchTiming(2) -- Default timing for automatic thread switching
+
+-- Here we execute the regular thread code:
+res,err=xpcall(threadFunction,function(err) return debug.traceback(err) end)
+if not res then
+	sim.addStatusbarMessage('Lua runtime error: '..err)
+end
+
+-- Put some clean-up code here:
+simRemoteApi.start(19997)</pre>
 <p><span>從<a href="https://40823246.github.io/cd2021/content/w16.html">40823246</a>得知的</span>吸盤程式(<a href="https://40823214.github.io/cd2021/content/index.html">40823214</a>的程式):</p>
 <div>
 <div class="syntaxhighlighter lua" id="highlighter_131059">
-<table border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td class="gutter">
-<div class="line number1 index0 alt2">1</div>
-<div class="line number2 index1 alt1">2</div>
-<div class="line number3 index2 alt2">3</div>
-<div class="line number4 index3 alt1">4</div>
-<div class="line number5 index4 alt2">5</div>
-<div class="line number6 index5 alt1">6</div>
-<div class="line number7 index6 alt2">7</div>
-<div class="line number8 index7 alt1">8</div>
-<div class="line number9 index8 alt2">9</div>
-<div class="line number10 index9 alt1">10</div>
-<div class="line number11 index10 alt2">11</div>
-<div class="line number12 index11 alt1">12</div>
-<div class="line number13 index12 alt2">13</div>
-<div class="line number14 index13 alt1">14</div>
-<div class="line number15 index14 alt2">15</div>
-<div class="line number16 index15 alt1">16</div>
-<div class="line number17 index16 alt2">17</div>
-<div class="line number18 index17 alt1">18</div>
-<div class="line number19 index18 alt2">19</div>
-<div class="line number20 index19 alt1">20</div>
-<div class="line number21 index20 alt2">21</div>
-<div class="line number22 index21 alt1">22</div>
-<div class="line number23 index22 alt2">23</div>
-<div class="line number24 index23 alt1">24</div>
-<div class="line number25 index24 alt2">25</div>
-<div class="line number26 index25 alt1">26</div>
-<div class="line number27 index26 alt2">27</div>
-<div class="line number28 index27 alt1">28</div>
-<div class="line number29 index28 alt2">29</div>
-<div class="line number30 index29 alt1">30</div>
-<div class="line number31 index30 alt2">31</div>
-<div class="line number32 index31 alt1">32</div>
-<div class="line number33 index32 alt2">33</div>
-<div class="line number34 index33 alt1">34</div>
-<div class="line number35 index34 alt2">35</div>
-<div class="line number36 index35 alt1">36</div>
-<div class="line number37 index36 alt2">37</div>
-<div class="line number38 index37 alt1">38</div>
-<div class="line number39 index38 alt2">39</div>
-<div class="line number40 index39 alt1">40</div>
-<div class="line number41 index40 alt2">41</div>
-<div class="line number42 index41 alt1">42</div>
-<div class="line number43 index42 alt2">43</div>
-<div class="line number44 index43 alt1">44</div>
-<div class="line number45 index44 alt2">45</div>
-<div class="line number46 index45 alt1">46</div>
-<div class="line number47 index46 alt2">47</div>
-<div class="line number48 index47 alt1">48</div>
-<div class="line number49 index48 alt2">49</div>
-<div class="line number50 index49 alt1">50</div>
-<div class="line number51 index50 alt2">51</div>
-<div class="line number52 index51 alt1">52</div>
-<div class="line number53 index52 alt2">53</div>
-<div class="line number54 index53 alt1">54</div>
-<div class="line number55 index54 alt2">55</div>
-<div class="line number56 index55 alt1">56</div>
-<div class="line number57 index56 alt2">57</div>
-<div class="line number58 index57 alt1">58</div>
-<div class="line number59 index58 alt2">59</div>
-<div class="line number60 index59 alt1">60</div>
-<div class="line number61 index60 alt2">61</div>
-<div class="line number62 index61 alt1">62</div>
-<div class="line number63 index62 alt2">63</div>
-<div class="line number64 index63 alt1">64</div>
-<div class="line number65 index64 alt2">65</div>
-<div class="line number66 index65 alt1">66</div>
-<div class="line number67 index66 alt2">67</div>
-<div class="line number68 index67 alt1">68</div>
-<div class="line number69 index68 alt2">69</div>
-<div class="line number70 index69 alt1">70</div>
-<div class="line number71 index70 alt2">71</div>
-<div class="line number72 index71 alt1">72</div>
-<div class="line number73 index72 alt2">73</div>
-<div class="line number74 index73 alt1">74</div>
-<div class="line number75 index74 alt2">75</div>
-<div class="line number76 index75 alt1">76</div>
-<div class="line number77 index76 alt2">77</div>
-<div class="line number78 index77 alt1">78</div>
-<div class="line number79 index78 alt2">79</div>
-<div class="line number80 index79 alt1">80</div>
-<div class="line number81 index80 alt2">81</div>
-<div class="line number82 index81 alt1">82</div>
-<div class="line number83 index82 alt2">83</div>
-<div class="line number84 index83 alt1">84</div>
-<div class="line number85 index84 alt2">85</div>
-<div class="line number86 index85 alt1">86</div>
-<div class="line number87 index86 alt2">87</div>
-<div class="line number88 index87 alt1">88</div>
-<div class="line number89 index88 alt2">89</div>
-<div class="line number90 index89 alt1">90</div>
-<div class="line number91 index90 alt2">91</div>
-<div class="line number92 index91 alt1">92</div>
-<div class="line number93 index92 alt2">93</div>
-<div class="line number94 index93 alt1">94</div>
-<div class="line number95 index94 alt2">95</div>
-<div class="line number96 index95 alt1">96</div>
-<div class="line number97 index96 alt2">97</div>
-<div class="line number98 index97 alt1">98</div>
-<div class="line number99 index98 alt2">99</div>
-<div class="line number100 index99 alt1">100</div>
-<div class="line number101 index100 alt2">101</div>
-<div class="line number102 index101 alt1">102</div>
-<div class="line number103 index102 alt2">103</div>
-<div class="line number104 index103 alt1">104</div>
-</td>
-<td class="code">
-<div class="container">
-<div class="line number1 index0 alt2"><code class="lua keyword">function</code> <code class="lua plain">sysCall_init() </code></div>
-<div class="line number2 index1 alt1"><code class="lua spaces">    </code><code class="lua comments">--this is teach by 40823214</code></div>
-<div class="line number3 index2 alt2"><code class="lua spaces">    </code><code class="lua plain">objectHandle=sim.getObjectHandle(</code><code class="lua string">'suctionPad'</code><code class="lua plain">)</code></div>
-<div class="line number4 index3 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setUserParameter(objectHandle,</code><code class="lua string">'@enable'</code><code class="lua plain">,</code><code class="lua string">''</code><code class="lua plain">)</code></div>
-<div class="line number5 index4 alt2"><code class="lua spaces">    </code><code class="lua plain">modelBase=sim.getObjectAssociatedWithScript(sim.handle_self)</code></div>
-<div class="line number6 index5 alt1"><code class="lua spaces">    </code><code class="lua plain">robotBase=modelBase</code></div>
-<div class="line number7 index6 alt2"><code class="lua spaces">    </code><code class="lua keyword">while</code> <code class="lua keyword">true</code> <code class="lua keyword">do</code></div>
-<div class="line number8 index7 alt1"><code class="lua spaces">        </code><code class="lua plain">robotBase=sim.getObjectParent(robotBase)</code></div>
-<div class="line number9 index8 alt2"><code class="lua spaces">        </code><code class="lua keyword">if</code> <code class="lua plain">robotBase==-1 </code><code class="lua keyword">then</code></div>
-<div class="line number10 index9 alt1"><code class="lua spaces">            </code><code class="lua plain">robotName=</code><code class="lua string">'Dobot'</code></div>
-<div class="line number11 index10 alt2"><code class="lua spaces">            </code><code class="lua keyword">break</code></div>
-<div class="line number12 index11 alt1"><code class="lua spaces">        </code><code class="lua keyword">end</code></div>
-<div class="line number13 index12 alt2"><code class="lua spaces">        </code><code class="lua plain">robotName=sim.getObjectName(robotBase)</code></div>
-<div class="line number14 index13 alt1"><code class="lua spaces">        </code><code class="lua plain">suffix,suffixlessName=sim.getNameSuffix(robotName)</code></div>
-<div class="line number15 index14 alt2"><code class="lua spaces">        </code><code class="lua keyword">if</code> <code class="lua plain">suffixlessName==</code><code class="lua string">'Dobot'</code> <code class="lua keyword">then</code></div>
-<div class="line number16 index15 alt1"><code class="lua spaces">            </code><code class="lua keyword">break</code></div>
-<div class="line number17 index16 alt2"><code class="lua spaces">        </code><code class="lua keyword">end</code></div>
-<div class="line number18 index17 alt1"><code class="lua spaces">    </code><code class="lua keyword">end</code></div>
-<div class="line number19 index18 alt2"> </div>
-<div class="line number20 index19 alt1"><code class="lua spaces">    </code><code class="lua plain">s=sim.getObjectHandle(</code><code class="lua string">'suctionPadSensor'</code><code class="lua plain">)</code></div>
-<div class="line number21 index20 alt2"><code class="lua spaces">    </code><code class="lua plain">l=sim.getObjectHandle(</code><code class="lua string">'suctionPadLoopClosureDummy1'</code><code class="lua plain">)</code></div>
-<div class="line number22 index21 alt1"><code class="lua spaces">    </code><code class="lua plain">l2=sim.getObjectHandle(</code><code class="lua string">'suctionPadLoopClosureDummy2'</code><code class="lua plain">)</code></div>
-<div class="line number23 index22 alt2"><code class="lua spaces">    </code><code class="lua plain">b=sim.getObjectHandle(</code><code class="lua string">'suctionPad'</code><code class="lua plain">)</code></div>
-<div class="line number24 index23 alt1"><code class="lua spaces">    </code><code class="lua plain">suctionPadLink=sim.getObjectHandle(</code><code class="lua string">'suctionPadLink'</code><code class="lua plain">)</code></div>
-<div class="line number25 index24 alt2"><code class="lua spaces">    </code><code class="lua keyword">local</code> <code class="lua plain">gripperBase=sim.getObjectAssociatedWithScript(sim.handle_self)</code></div>
-<div class="line number26 index25 alt1"> </div>
-<div class="line number27 index26 alt2"><code class="lua spaces">    </code><code class="lua plain">infiniteStrength=sim.getScriptSimulationParameter(sim.handle_self,</code><code class="lua string">'infiniteStrength'</code><code class="lua plain">)</code></div>
-<div class="line number28 index27 alt1"><code class="lua spaces">    </code><code class="lua plain">maxPullForce=sim.getScriptSimulationParameter(sim.handle_self,</code><code class="lua string">'maxPullForce'</code><code class="lua plain">)</code></div>
-<div class="line number29 index28 alt2"><code class="lua spaces">    </code><code class="lua plain">maxShearForce=sim.getScriptSimulationParameter(sim.handle_self,</code><code class="lua string">'maxShearForce'</code><code class="lua plain">)</code></div>
-<div class="line number30 index29 alt1"><code class="lua spaces">    </code><code class="lua plain">maxPeelTorque=sim.getScriptSimulationParameter(sim.handle_self,</code><code class="lua string">'maxPeelTorque'</code><code class="lua plain">)</code></div>
-<div class="line number31 index30 alt2"> </div>
-<div class="line number32 index31 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setLinkDummy(l,-1)</code></div>
-<div class="line number33 index32 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setObjectParent(l,b,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number34 index33 alt1"><code class="lua spaces">    </code><code class="lua plain">m=sim.getObjectMatrix(l2,-1)</code></div>
-<div class="line number35 index34 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setObjectMatrix(l,-1,m)</code></div>
-<div class="line number36 index35 alt1"><code class="lua keyword">end</code></div>
-<div class="line number37 index36 alt2"> </div>
-<div class="line number38 index37 alt1"><code class="lua keyword">function</code> <code class="lua plain">sysCall_cleanup() </code></div>
-<div class="line number39 index38 alt2"><code class="lua spaces">    </code><code class="lua comments">--this is teach by 40823214</code></div>
-<div class="line number40 index39 alt1"><code class="lua spaces">    </code><code class="lua plain">sim.setLinkDummy(l,-1)</code></div>
-<div class="line number41 index40 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setObjectParent(l,b,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number42 index41 alt1"><code class="lua spaces">    </code><code class="lua plain">m=sim.getObjectMatrix(l2,-1)</code></div>
-<div class="line number43 index42 alt2"><code class="lua spaces">    </code><code class="lua plain">sim.setObjectMatrix(l,-1,m)</code></div>
-<div class="line number44 index43 alt1"><code class="lua keyword">end</code></div>
-<div class="line number45 index44 alt2"> </div>
-<div class="line number46 index45 alt1"><code class="lua keyword">function</code> <code class="lua plain">sysCall_sensing() </code></div>
-<div class="line number47 index46 alt2"><code class="lua spaces">    </code><code class="lua plain">parent=sim.getObjectParent(l)</code></div>
-<div class="line number48 index47 alt1"><code class="lua spaces">    </code><code class="lua comments">--this is teach by 40823214</code></div>
-<div class="line number49 index48 alt2"><code class="lua spaces">    </code><code class="lua keyword">local</code> <code class="lua plain">sig=sim.getIntegerSignal(</code><code class="lua string">"pad_switch"</code><code class="lua plain">)</code></div>
-<div class="line number50 index49 alt1"><code class="lua spaces">    </code><code class="lua keyword">if</code> <code class="lua plain">(</code><code class="lua keyword">not</code> <code class="lua plain">sig) </code><code class="lua keyword">or</code> <code class="lua plain">(sig==0) </code><code class="lua keyword">then</code></div>
-<div class="line number51 index50 alt2"><code class="lua spaces">        </code><code class="lua keyword">if</code> <code class="lua plain">(parent~=b) </code><code class="lua keyword">then</code></div>
-<div class="line number52 index51 alt1"><code class="lua spaces">            </code><code class="lua plain">sim.setLinkDummy(l,-1)</code></div>
-<div class="line number53 index52 alt2"><code class="lua spaces">            </code><code class="lua plain">sim.setObjectParent(l,b,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number54 index53 alt1"><code class="lua spaces">            </code><code class="lua plain">m=sim.getObjectMatrix(l2,-1)</code></div>
-<div class="line number55 index54 alt2"><code class="lua spaces">            </code><code class="lua plain">sim.setObjectMatrix(l,-1,m)</code></div>
-<div class="line number56 index55 alt1"><code class="lua spaces">        </code><code class="lua keyword">end</code></div>
-<div class="line number57 index56 alt2"><code class="lua spaces">    </code><code class="lua keyword">else</code></div>
-<div class="line number58 index57 alt1"><code class="lua spaces">        </code><code class="lua keyword">if</code> <code class="lua plain">(parent==b) </code><code class="lua keyword">then</code></div>
-<div class="line number59 index58 alt2"><code class="lua spaces">            </code><code class="lua plain">index=0</code></div>
-<div class="line number60 index59 alt1"><code class="lua spaces">            </code><code class="lua keyword">while</code> <code class="lua keyword">true</code> <code class="lua keyword">do</code></div>
-<div class="line number61 index60 alt2"><code class="lua spaces">                </code><code class="lua plain">shape=sim.getObjects(index,sim.object_shape_type)</code></div>
-<div class="line number62 index61 alt1"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(shape==-1) </code><code class="lua keyword">then</code></div>
-<div class="line number63 index62 alt2"><code class="lua spaces">                    </code><code class="lua keyword">break</code></div>
-<div class="line number64 index63 alt1"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
-<div class="line number65 index64 alt2"><code class="lua spaces">                </code><code class="lua keyword">local</code> <code class="lua plain">res,val=sim.getObjectInt32Parameter(shape,sim.shapeintparam_respondable)</code></div>
-<div class="line number66 index65 alt1"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(shape~=b) </code><code class="lua keyword">and</code> <code class="lua plain">(val~=0) </code><code class="lua keyword">and</code> <code class="lua plain">(sim.checkProximitySensor(s,shape)==1) </code><code class="lua keyword">then</code></div>
-<div class="line number67 index66 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- Ok, we found a respondable shape that was detected</code></div>
-<div class="line number68 index67 alt1"><code class="lua spaces">                    </code><code class="lua comments">-- We connect to that shape:</code></div>
-<div class="line number69 index68 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- Make sure the two dummies are initially coincident:</code></div>
-<div class="line number70 index69 alt1"><code class="lua spaces">                    </code><code class="lua plain">sim.setObjectParent(l,b,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number71 index70 alt2"><code class="lua spaces">                    </code><code class="lua plain">m=sim.getObjectMatrix(l2,-1)</code></div>
-<div class="line number72 index71 alt1"><code class="lua spaces">                    </code><code class="lua plain">sim.setObjectMatrix(l,-1,m)</code></div>
-<div class="line number73 index72 alt2"><code class="lua spaces">                    </code><code class="lua comments">-- Do the connection:</code></div>
-<div class="line number74 index73 alt1"><code class="lua spaces">                    </code><code class="lua plain">sim.setObjectParent(l,shape,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number75 index74 alt2"><code class="lua spaces">                    </code><code class="lua plain">sim.setLinkDummy(l,l2)</code></div>
-<div class="line number76 index75 alt1"><code class="lua spaces">                    </code><code class="lua keyword">break</code></div>
-<div class="line number77 index76 alt2"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
-<div class="line number78 index77 alt1"><code class="lua spaces">                </code><code class="lua plain">index=index+1</code></div>
-<div class="line number79 index78 alt2"><code class="lua spaces">            </code><code class="lua keyword">end</code></div>
-<div class="line number80 index79 alt1"><code class="lua spaces">        </code><code class="lua keyword">else</code></div>
-<div class="line number81 index80 alt2"><code class="lua spaces">            </code><code class="lua comments">-- Here we have an object attached</code></div>
-<div class="line number82 index81 alt1"><code class="lua spaces">            </code><code class="lua keyword">if</code> <code class="lua plain">(infiniteStrength==</code><code class="lua keyword">false</code><code class="lua plain">) </code><code class="lua keyword">then</code></div>
-<div class="line number83 index82 alt2"><code class="lua spaces">                </code><code class="lua comments">-- We might have to conditionally beak it apart!</code></div>
-<div class="line number84 index83 alt1"><code class="lua spaces">                </code><code class="lua plain">result,force,torque=sim.readForceSensor(suctionPadLink) </code><code class="lua comments">-- Here we read the median value out of 5 values (check the force sensor prop. dialog)</code></div>
-<div class="line number85 index84 alt2"><code class="lua spaces">                </code><code class="lua keyword">if</code> <code class="lua plain">(result&gt;0) </code><code class="lua keyword">then</code></div>
-<div class="line number86 index85 alt1"><code class="lua spaces">                    </code><code class="lua plain">breakIt=</code><code class="lua keyword">false</code></div>
-<div class="line number87 index86 alt2"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(force[3]&gt;maxPullForce) </code><code class="lua keyword">then</code> <code class="lua plain">breakIt=</code><code class="lua keyword">true</code> <code class="lua keyword">end</code></div>
-<div class="line number88 index87 alt1"><code class="lua spaces">                    </code><code class="lua plain">sf=</code><code class="lua functions">math.sqrt</code><code class="lua plain">(force[1]*force[1]+force[2]*force[2])</code></div>
-<div class="line number89 index88 alt2"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(sf&gt;maxShearForce) </code><code class="lua keyword">then</code> <code class="lua plain">breakIt=</code><code class="lua keyword">true</code> <code class="lua keyword">end</code></div>
-<div class="line number90 index89 alt1"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(torque[1]&gt;maxPeelTorque) </code><code class="lua keyword">then</code> <code class="lua plain">breakIt=</code><code class="lua keyword">true</code> <code class="lua keyword">end</code></div>
-<div class="line number91 index90 alt2"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(torque[2]&gt;maxPeelTorque) </code><code class="lua keyword">then</code> <code class="lua plain">breakIt=</code><code class="lua keyword">true</code> <code class="lua keyword">end</code></div>
-<div class="line number92 index91 alt1"><code class="lua spaces">                    </code><code class="lua keyword">if</code> <code class="lua plain">(breakIt) </code><code class="lua keyword">then</code></div>
-<div class="line number93 index92 alt2"><code class="lua spaces">                        </code><code class="lua comments">-- We break the link:</code></div>
-<div class="line number94 index93 alt1"><code class="lua spaces">                        </code><code class="lua plain">sim.setLinkDummy(l,-1)</code></div>
-<div class="line number95 index94 alt2"><code class="lua spaces">                        </code><code class="lua plain">sim.setObjectParent(l,b,</code><code class="lua keyword">true</code><code class="lua plain">)</code></div>
-<div class="line number96 index95 alt1"><code class="lua spaces">                        </code><code class="lua plain">m=sim.getObjectMatrix(l2,-1)</code></div>
-<div class="line number97 index96 alt2"><code class="lua spaces">                        </code><code class="lua plain">sim.setObjectMatrix(l,-1,m)</code></div>
-<div class="line number98 index97 alt1"><code class="lua spaces">                    </code><code class="lua keyword">end</code></div>
-<div class="line number99 index98 alt2"><code class="lua spaces">                </code><code class="lua keyword">end</code></div>
-<div class="line number100 index99 alt1"><code class="lua spaces">            </code><code class="lua keyword">end</code></div>
-<div class="line number101 index100 alt2"><code class="lua spaces">        </code><code class="lua keyword">end</code></div>
-<div class="line number102 index101 alt1"><code class="lua spaces">    </code><code class="lua keyword">end</code></div>
-<div class="line number103 index102 alt2"><code class="lua keyword">end</code></div>
-<div class="line number104 index103 alt1"><code class="lua comments">--by 40823214</code></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init() 
+    objectHandle=sim.getObjectHandle('suctionPad')
+    sim.setUserParameter(objectHandle,'@enable','')
+    modelBase=sim.getObjectAssociatedWithScript(sim.handle_self)
+    robotBase=modelBase
+    while true do
+        robotBase=sim.getObjectParent(robotBase)
+        if robotBase==-1 then
+            robotName='Dobot'
+            break
+        end
+        robotName=sim.getObjectName(robotBase)
+        suffix,suffixlessName=sim.getNameSuffix(robotName)
+        if suffixlessName=='Dobot' then
+            break
+        end
+    end
+ 
+    s=sim.getObjectHandle('suctionPadSensor')
+    l=sim.getObjectHandle('suctionPadLoopClosureDummy1')
+    l2=sim.getObjectHandle('suctionPadLoopClosureDummy2')
+    b=sim.getObjectHandle('suctionPad')
+    suctionPadLink=sim.getObjectHandle('suctionPadLink')
+    local gripperBase=sim.getObjectAssociatedWithScript(sim.handle_self)
+ 
+    infiniteStrength=sim.getScriptSimulationParameter(sim.handle_self,'infiniteStrength')
+    maxPullForce=sim.getScriptSimulationParameter(sim.handle_self,'maxPullForce')
+    maxShearForce=sim.getScriptSimulationParameter(sim.handle_self,'maxShearForce')
+    maxPeelTorque=sim.getScriptSimulationParameter(sim.handle_self,'maxPeelTorque')
+    -- Do some initial settings here
+    sim.setLinkDummy(l,-1)
+    sim.setObjectParent(l,b,true)
+    m=sim.getObjectMatrix(l2,-1)
+    sim.setObjectMatrix(l,-1,m)
+end
+ 
+function sysCall_cleanup() 
+    sim.setLinkDummy(l,-1)
+    sim.setObjectParent(l,b,true)
+    m=sim.getObjectMatrix(l2,-1)
+    sim.setObjectMatrix(l,-1,m)
+end
+ 
+function sysCall_sensing() 
+    parent=sim.getObjectParent(l)
+    local sig=sim.getIntegerSignal("pad_switch")
+    if (not sig) or (sig==0) then
+        if (parent~=b) then
+            sim.setLinkDummy(l,-1)
+            sim.setObjectParent(l,b,true)
+            m=sim.getObjectMatrix(l2,-1)
+            sim.setObjectMatrix(l,-1,m)
+        end
+        --Execute the suction cup program by importing the command function
+    else
+        if (parent==b) then
+            index=0
+            while true do
+                shape=sim.getObjects(index,sim.object_shape_type)
+                if (shape==-1) then
+                    break
+                end
+                local res,val=sim.getObjectInt32Parameter(shape,sim.shapeintparam_respondable)
+                if (shape~=b) and (val~=0) and (sim.checkProximitySensor(s,shape)==1) then
+                    -- Ok, we found a respondable shape that was detected
+                    -- We connect to that shape:
+                    -- Make sure the two dummies are initially coincident:
+                    sim.setObjectParent(l,b,true)
+                    m=sim.getObjectMatrix(l2,-1)
+                    sim.setObjectMatrix(l,-1,m)
+                    -- Do the connection:
+                    sim.setObjectParent(l,shape,true)
+                    sim.setLinkDummy(l,l2)
+                    break
+                end
+                index=index+1
+            end
+        else
+            -- Here we have an object attached
+            if (infiniteStrength==false) then
+                -- We might have to conditionally beak it apart!
+                result,force,torque=sim.readForceSensor(suctionPadLink) -- Here we read the median value out of 5 values (check the force sensor prop. dialog)
+                if (result&gt;0) then
+                    breakIt=false
+                    if (force[3]&gt;maxPullForce) then breakIt=true end
+                    sf=math.sqrt(force[1]*force[1]+force[2]*force[2])
+                    if (sf&gt;maxShearForce) then breakIt=true end
+                    if (torque[1]&gt;maxPeelTorque) then breakIt=true end
+                    if (torque[2]&gt;maxPeelTorque) then breakIt=true end
+                    if (breakIt) then
+                        -- We break the link:
+                        sim.setLinkDummy(l,-1)
+                        sim.setObjectParent(l,b,true)
+                        m=sim.getObjectMatrix(l2,-1)
+                        sim.setObjectMatrix(l,-1,m)
+                    end
+                end
+            end
+        end
+    end
+end</pre>
 </div>
 </div></div></div>
