@@ -586,16 +586,18 @@ for i in range(6):
 <p><img alt="" height="451" src="/images/螢幕擷取畫面 2021-06-03 155040.jpg" width="500"/></p>
 <p></p>
 <p></p><h2>W14</h2>
-<h3>CoppeliaSim 控制程式</h3>
+<h3>CoppeliaSim sensor</h3>
 <p><a href="https://drive.google.com/file/d/1YOP5Q7wTjEPT15hSmSKPPZYY97R31b9S/view?usp=sharing">範例</a></p>
-<p><a href="https://drive.google.com/file/d/1dg8JT-eVdxi35Ih2qHo-6JDIwFy2KcUb/view?usp=sharing">sensor test(未完成)</a></p>
-<p><a href="https://drive.google.com/file/d/1bcIM18hiCkBu18qGmi5mSuuOYOlekIyB/view?usp=sharing">MTB test(未完成)</a></p>
+<p><a href="https://drive.google.com/drive/folders/1vnIIO4SSRHLAeuD9lmH6dk5QqLyOXn7e?usp=sharing">V-REP Inverse Kinematics Tutorial</a></p>
 <p>參考資料:</p>
 <p><a href="https://blog.csdn.net/qq_42703283/article/details/101428684"><span style="font-weight: 400;">CoppeliaSim：视觉传感器的使用与属性参数</span></a></p>
 <p><a href="https://blog.csdn.net/qq_38587510/article/details/104399632"><span style="font-weight: 400;">Memos:V-REP/Coppeliasim视觉传感器的使用</span></a></p>
 <p><a href="https://blog.csdn.net/Csdn_Darry/article/details/107142216"><span style="font-weight: 400;">CoppeliaSim 用户手册</span></a></p>
-<p><span style="font-weight: 400;"><a href="https://www.youtube.com/watch?v=MX3VXvZFk0U">Robotics Simulation: CoppeliaSim, from the Creators of V-REP</a></span></p>
-<p><a href="https://www.youtube.com/watch?v=CVoV08T0Aqo">Pick and place application with KUKA KR16 robot using v-rep (CoppeliaSim) and Matlab</a></p><h2>W15</h2>
+<p><span style="font-weight: 400;"><a href="https://github.com/youtubeSam/V-REP-Inverse-Kinematics">V-REP-Inverse-Kinematics</a></span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/MX3VXvZFk0U" width="560"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/CVoV08T0Aqo" width="560"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JUiSZinyH1c" width="560"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Sf8E16EK6BQ" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/heNYjDOVcKY" width="560"></iframe></p><h2>W15</h2>
 <h3>fossil 教學</h3>
 <p><a href="https://fossil.kmol.info/u/40823125/dir?ci=tip">倉儲</a> | <a href="https://fossil.kmol.info/u/40823125/doc/trunk/content/index.html">網頁</a></p>
 <p>進入<a href="https://fossil.kmol.info:9443/">https://fossil.kmol.info:9443</a> 登入學校email</p>
@@ -934,144 +936,30 @@ end
 <p><strong>第二版:</strong></p>
 <p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/dp8DqVPdMtE" width="560"></iframe></strong></p>
 <p><strong>Mtb_robot_keyboard.lua:</strong></p>
-<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;!-- Created by Leo: http://leoeditor.com/leo_toc.html --&gt;
-&lt;leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" &gt;
-&lt;leo_header file_format="2"/&gt;
-&lt;globals/&gt;
-&lt;preferences/&gt;
-&lt;find_panel_settings/&gt;
-&lt;vnodes&gt;
-&lt;v t="leo.20210526153741.1"&gt;&lt;vh&gt;@settings&lt;/vh&gt;
-&lt;v t="leo.20210526153741.2"&gt;&lt;vh&gt;@data qt-gui-plugin-style-sheet&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210526153741.3"&gt;&lt;vh&gt;@string initial_split_orientation = horizontal&lt;/vh&gt;&lt;/v&gt;
-&lt;/v&gt;
-&lt;v t="leo.20210526155936.1"&gt;&lt;vh&gt;About W16 task&lt;/vh&gt;
-&lt;v t="leo.20210529151306.1"&gt;&lt;vh&gt;mtbrobot_w16&lt;/vh&gt;&lt;/v&gt;
-&lt;/v&gt;
-&lt;v t="leo.20210529215420.1"&gt;&lt;vh&gt;force sensor&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155453.1"&gt;&lt;vh&gt;recursive importer&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.1"&gt;&lt;vh&gt;imported files&lt;/vh&gt;
-&lt;v t="leo.20210529155606.2"&gt;&lt;vh&gt;@path ./&lt;/vh&gt;
-&lt;v t="leo.20210529155606.8"&gt;&lt;vh&gt;@clean Mtb_robot_keyboard.lua&lt;/vh&gt;
-&lt;v t="leo.20210529155606.9"&gt;&lt;vh&gt;sysCall_init&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.10"&gt;&lt;vh&gt;sysCall_actuation&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.11"&gt;&lt;vh&gt;sysCall_sensing&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.12"&gt;&lt;vh&gt;sysCall_cleanup&lt;/vh&gt;&lt;/v&gt;
-&lt;/v&gt;
-&lt;v t="leo.20210615114721.1"&gt;&lt;vh&gt;@clean Mtb_robot_loop.lua&lt;/vh&gt;
-&lt;v t="leo.20210615114721.2"&gt;&lt;vh&gt;sysCall_threadmain&lt;/vh&gt;&lt;/v&gt;
-&lt;/v&gt;
-&lt;v t="leo.20210529155606.18"&gt;&lt;vh&gt;@clean suctionpad.lua&lt;/vh&gt;
-&lt;v t="leo.20210529155606.19"&gt;&lt;vh&gt;sysCall_init (suctionpad_w16.lua)&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.20"&gt;&lt;vh&gt;sysCall_cleanup (suctionpad_w16.lua)&lt;/vh&gt;&lt;/v&gt;
-&lt;v t="leo.20210529155606.21"&gt;&lt;vh&gt;sysCall_sensing (suctionpad_w16.lua)&lt;/vh&gt;&lt;/v&gt;
-&lt;/v&gt;
-&lt;/v&gt;
-&lt;/v&gt;
-&lt;/vnodes&gt;
-&lt;tnodes&gt;
-&lt;t tx="leo.20210526153741.1"&gt;&lt;/t&gt;
-&lt;t tx="leo.20210526153741.2"&gt;QTreeWidget {
-    /* These apply to the selected item, but not to editing items.*/
-    background-color: #ffffec; /* Leo's traditional tree color */
-    selection-color: black; /* was white */
-    selection-background-color: lightgrey;
-    /* font-family: SansSerif; */
-    /*font-family: DejaVu Sans Mono;*/
-    font-family:YaHei Mono;
-    /* 標題字型大小設定 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal, italic,oblique */
- }
-
-/* Headline edit widgets */
-QTreeWidget QLineEdit {
-    background-color: cornsilk;
-    selection-color: white;
-    selection-background-color: blue;
-    /*font-family: DejaVu Sans Mono;*/    
-    font-family:YaHei Mono;
-    /* 沒有特別對應字型大小 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal, italic,oblique */
-}
-
-/* The log panes */
-QTextEdit {
-    background-color: #f2fdff;
-    selection-color: red;
-    selection-background-color: blue;
-    /* font-family: Courier New; */
-    font-family:YaHei Mono;
-    /* log font 大小 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal, italic,oblique */
-}
-
-/* The body pane */
-QTextEdit#richTextEdit {
-    background-color: #fdf5f5; /* A kind of pink. */
-    selection-color: white;
-    selection-background-color: red;
-    /*font-family: DejaVu Sans Mono;*/
-    /* font-family: Courier New; */
-    font-family:YaHei Mono;
-    /* 內文字型大小 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal,italic,oblique */
-}
-
-QLabel {
-    font-family:YaHei Mono;'CherryPy', 'pytz', 'mako', 'beautifulsoup4', 'pymysql', 'peewee'
-    /* 下方的 Minibuffer 標題字型大小 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal,italic,oblique */
-}
-
-/* Editor labels */
-QLineEdit#editorLabel {
-    background-color: #ffffec;
-    font-family:YaHei Mono;
-    /* 沒有直接對應字型大小 */
-    font-size: 30px;
-    font-weight: normal; /* normal,bold,100,..,900 */
-    font-style: normal; /* normal,italic,oblique */
-    border: 2px;
-    margin: 2px;
-}&lt;/t&gt;
-&lt;t tx="leo.20210526153741.3"&gt;horizontal: body pane to the left
-vertical: body pane on the botton&lt;/t&gt;
-&lt;t tx="leo.20210526155936.1"&gt;https://www.coppeliarobotics.com/helpFiles/en/robotLanguageIntegrationTutorial.htm
-
-目前 MTB_robot 是一項四軸機械手臂, 採用特殊的指令語言令 robot 移動, 並利用 suction pad 執行 pick and place
-
-請各組設法去除原有的特殊控制語法, 編寫一組通用的 lua 程式完成上述 MTB_robot 取放 block 的操作流程.&lt;/t&gt;
-&lt;t tx="leo.20210529151306.1"&gt;將原先透過 plugin 特殊控制語法的場景, 改為直接以 lua 驅動 robot&lt;/t&gt;
-&lt;t tx="leo.20210529155453.1"&gt;'''Recursively import all python files in a directory and clean the result.'''
-# ctrl + b to execute
-
-c.recursiveImport(
-    dir_ = r'./',
-    kind = '@clean', # The new best practice.
-    safe_at_file = False,
-    theTypes = ['.lua'] 
-)&lt;/t&gt;
-&lt;t tx="leo.20210529155606.1"&gt;&lt;/t&gt;
-&lt;t tx="leo.20210529155606.10"&gt;function sysCall_actuation()
- calibration = 0.004
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+     axis1=sim.getObjectHandle('MTB_axis1')
+     axis2=sim.getObjectHandle('MTB_axis2')
+     axis3=sim.getObjectHandle('MTB_axis3')
+     rotation1 = 0
+     rotation2 = 0
+     distance3 = 0
+    -- Do some initial settings here
+    -- Get object handle
+      
+     deg = math.pi/180
+     --sim.sJointTargetVelocity(joint,5.5)
+     
+end
+ 
+function sysCall_actuation()
+ calibration = 0.01
  message,auxiliaryData=sim.getSimulatorMessage()
  if (message==sim.message_keypress) then
       print(auxiliaryData[1])--key
       if (auxiliaryData[1]==string.byte(' ')) then
-      end
+      endd
        --Display keyboard key code
-      if (auxiliaryData[1]==97) then --a
+      if (auxiliaryData[1]==97) then--a
       rotation1 = rotation1 + 5*deg
       sim.setJointPosition(axis1, rotation1)
       end
@@ -1081,11 +969,11 @@ c.recursiveImport(
       sim.setJointPosition(axis1, rotation1)
       end
       -- Press the "d" key to turn axis1 5 degrees clockwise
-      if (auxiliaryData[1]==119) then --w
+      if (auxiliaryData[1]==119) then--w
       rotation2 = rotation2 + 5*deg
       sim.setJointPosition(axis2, rotation2)
       end
-       -- Press the "w" key to turn axis2 5 degrees counterclockwise
+      -- Press the "w" key to turn axis2 5 degrees counterclockwise
       if (auxiliaryData[1]==115) then --s
       rotation2 = rotation2 - 5*deg
       sim.setJointPosition(axis2, rotation2)
@@ -1101,261 +989,20 @@ c.recursiveImport(
       sim.setJointPosition(axis3, distance3)
       end
       -- Press the "q" key to move up 0.01
-      if (auxiliaryData[1]==122) then --z 
-      sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
-      end -- Press "z" key to activate the suction pad
-      if (auxiliaryData[1]==120) then --x
-      sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
-      end -- Press "x" key to deactivate the suction pad
-      if (auxiliaryData[1]==49) then --1
-      V1=43.9242*deg
-      V2=66.007*deg
-      sim.setJointPosition(axis1, V1)
-      sim.setJointPosition(axis2, V2)
-      print(0.2,0.7)
-      end
-      -- Press "1" to go to (0.2, 0.7)
-      if (auxiliaryData[1]==50) then --2
-      V1=-158.2529*deg
-      V2=87.7894*deg
-      sim.setJointPosition(axis1, V1)
-      sim.setJointPosition(axis2, V2)
-      print(-0.3,-0.55)
-      end
-      -- Press "2" to go to (-0.3,- 0.55)
       
-  
- end    
-
-
+ end   
+ 
 end
-
-&lt;/t&gt;
-&lt;t tx="leo.20210529155606.11"&gt;function sysCall_sensing()
+function sysCall_sensing()
     -- put your sensing code here
-end&lt;/t&gt;
-&lt;t tx="leo.20210529155606.12"&gt;function sysCall_cleanup()
+    
+end
+ 
+function sysCall_cleanup()
     -- do some clean-up here
-end&lt;/t&gt;
-&lt;t tx="leo.20210529155606.18"&gt;@path ./
-@others
-@language lua
-@tabwidth -4
-&lt;/t&gt;
-&lt;t tx="leo.20210529155606.19"&gt;function sysCall_init() 
-    s=sim.getObjectHandle('suctionPadSensor')
-    l=sim.getObjectHandle('suctionPadLoopClosureDummy1')
-    l2=sim.getObjectHandle('suctionPadLoopClosureDummy2')
-    b=sim.getObjectHandle('suctionPad')
-    suctionPadLink=sim.getObjectHandle('suctionPadLink')
-
-    infiniteStrength=sim.getScriptSimulationParameter(sim.handle_self,'infiniteStrength')
-    maxPullForce=sim.getScriptSimulationParameter(sim.handle_self,'maxPullForce')
-    maxShearForce=sim.getScriptSimulationParameter(sim.handle_self,'maxShearForce')
-    maxPeelTorque=sim.getScriptSimulationParameter(sim.handle_self,'maxPeelTorque')
-
-    sim.setLinkDummy(l,-1)
-    sim.setObjectParent(l,b,true)
-    m=sim.getObjectMatrix(l2,-1)
-    sim.setObjectMatrix(l,-1,m)
-end
-&lt;/t&gt;
-&lt;t tx="leo.20210529155606.2"&gt;&lt;/t&gt;
-&lt;t tx="leo.20210529155606.20"&gt;function sysCall_cleanup() 
-    sim.setLinkDummy(l,-1)
-    sim.setObjectParent(l,b,true)
-    m=sim.getObjectMatrix(l2,-1)
-    sim.setObjectMatrix(l,-1,m)
-end &lt;/t&gt;
-&lt;t tx="leo.20210529155606.21"&gt;function sysCall_sensing() 
-    parent=sim.getObjectParent(l)
-    if (sim.getScriptSimulationParameter(sim.handle_self,'active')==false) then
-        if (parent~=b) then
-            sim.setLinkDummy(l,-1)
-            sim.setObjectParent(l,b,true)
-            m=sim.getObjectMatrix(l2,-1)
-            sim.setObjectMatrix(l,-1,m)
-        end
-    else
-        if (parent==b) then
-            -- Here we want to detect a respondable shape, and then connect to it with a force sensor (via a loop closure dummy dummy link)
-            -- However most respondable shapes are set to "non-detectable", so "sim.readProximitySensor" or similar will not work.
-            -- But "sim.checkProximitySensor" or similar will work (they don't check the "detectable" flags), but we have to go through all shape objects!
-            index=0
-            while true do
-                shape=sim.getObjects(index,sim.object_shape_type)
-                if (shape==-1) then
-                    break
-                end
-                if (shape~=b) and (sim.getObjectInt32Parameter(shape,sim.shapeintparam_respondable)~=0) and (sim.checkProximitySensor(s,shape)==1) then
-                    -- Ok, we found a respondable shape that was detected
-                    -- We connect to that shape:
-                    -- Make sure the two dummies are initially coincident:
-                    sim.setObjectParent(l,b,true)
-                    m=sim.getObjectMatrix(l2,-1)
-                    sim.setObjectMatrix(l,-1,m)
-                    -- Do the connection:
-                    sim.setObjectParent(l,shape,true)
-                    sim.setLinkDummy(l,l2)
-                    break
-                end
-                index=index+1
-            end
-        else
-            -- Here we have an object attached
-            if (infiniteStrength==false) then
-                -- We might have to conditionally beak it apart!
-                result,force,torque=sim.readForceSensor(suctionPadLink) -- Here we read the median value out of 5 values (check the force sensor prop. dialog)
-                if (result&gt;0) then
-                    breakIt=false
-                    if (force[3]&gt;maxPullForce) then breakIt=true end
-                    sf=math.sqrt(force[1]*force[1]+force[2]*force[2])
-                    if (sf&gt;maxShearForce) then breakIt=true end
-                    if (torque[1]&gt;maxPeelTorque) then breakIt=true end
-                    if (torque[2]&gt;maxPeelTorque) then breakIt=true end
-                    if (breakIt) then
-                        -- We break the link:
-                        sim.setLinkDummy(l,-1)
-                        sim.setObjectParent(l,b,true)
-                        m=sim.getObjectMatrix(l2,-1)
-                        sim.setObjectMatrix(l,-1,m)
-                    end
-                end
-            end
-        end
-    end
-end 
-&lt;/t&gt;
-&lt;t tx="leo.20210529155606.8"&gt;@path ./
-@others
-@language lua
-@tabwidth -4
-&lt;/t&gt;
-&lt;t tx="leo.20210529155606.9"&gt;function sysCall_init()
-    -- do some initialization here
-     axis1=sim.getObjectHandle('MTB_axis1')
-     axis2=sim.getObjectHandle('MTB_axis2')
-     axis3=sim.getObjectHandle('MTB_axis3')
-     suctionPad=sim.getObjectHandle('suctionPad')     
-     rotation1 = 0
-     rotation2 = 0
-     distance3 = 0
-     
-     deg = math.pi/180
-function ik(x, y)
-    theta = ik(0.2, 0.7)
-    theta = ik(-0.3, -0.55)
-    -- (x, y) need to be located inside the circle with radius a1+a2
-    if (x^2 + y^2) &lt;= (a1+ a2)^2 then
-        q2 = math.acos((x^2+y^2-a1^2-a2^2)/(2*a1*a2))
-        q1 = math.atan2(y, x) - math.atan2((a2*math.sin(q2)), (a1+a2*math.cos(q2)))
-        return {round(q1*deg, 4), round(q2*deg, 4)}
-    end
-    print(theta[1], theta[2])
-  
-end   
-     
     
-     
-
-end&lt;/t&gt;
-&lt;t tx="leo.20210529215420.1"&gt;Force sensors are initially rigid links between two shapes that are able to measure transmitted forces and torques. The rigidity of force sensors is conditional, in the sense that force sensors can be broken if a certain condition arises (e.g. if a force or torque threshold is overshot). Following figure illustrates an application using a force sensor:
-
-A force sensor is only operational during simulation if it is dynamically enabled. It means the child of the force sensor need to be dynamically enabled.
-
-In CoppeliaSim, only a limited number of objects will be dynamically simulated. Those are shapes, joints and force sensors, but it will depend on the scene structure and object properties, whether a given object will be dynamically simulated. &lt;/t&gt;
-&lt;t tx="leo.20210615114721.1"&gt;@path ./
-@others
-@language lua
-@tabwidth -4
-&lt;/t&gt;
-&lt;t tx="leo.20210615114721.2"&gt;function sysCall_threadmain()
-    -- do some initialization here
-    axis1=sim.getObjectHandle('MTB_axis1')
-    axis2=sim.getObjectHandle('MTB_axis2')
-    axis3=sim.getObjectHandle('MTB_axis3')
-    suctionPad=sim.getObjectHandle('suctionPad')
-    angle=180/math.pi
-    angle1=math.pi/180
-    a1=0.467
-    a2=0.4
-    x=0.2
-    y=0.7
-    print(a)
-    function round(x, n)
-    n = math.pow(10, n or 0)
-    x = x * n
-    if x &gt;= 0 then x = math.floor(x + 0.5) else x = math.ceil(x - 0.5) end
-    return x / n
 end
  
--- radian to degree
-deg = 180/math.pi
--- link 1 length
-a1 = 0.467
--- link 2 length
-a2 = 0.4
--- derivated based upon https://www.youtube.com/watch?v=IKOGwoJ2HLk&amp;t=311s
-function ik(x, y)
-    -- (x, y) need to be located inside the circle with radius a1+a2
-    if (x^2 + y^2) &lt;= (a1+ a2)^2 then
-        q2 = math.acos((x^2+y^2-a1^2-a2^2)/(2*a1*a2))
-        q1 = math.atan2(y, x) - math.atan2((a2*math.sin(q2)), (a1+a2*math.cos(q2)))
-        return {round(q1*deg, 4), round(q2*deg, 4)}
-    else
-        print("Over range!")
-    end
-end
- 
-theta = ik(0.2, 0.7)
- 
-print(theta[1], theta[2])
-            sim.setJointPosition(axis1, 0)
-            sim.setJointPosition(axis2, 0)
-            sim.wait(5)
-    
-    while(true)
-        do  
-            sim.wait(5)
-            sim.setJointPosition(axis3, -0.03)
-            sim.wait(5)
-            sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
-            sim.wait(5)
-            sim.setJointPosition(axis3, 0.01)
-            theta = ik(0.2, 0.7)
-            sim.wait(5)
-            sim.setJointPosition(axis3, 0.01)
-            sim.setJointPosition(axis1,theta[1]*angle1)
-            sim.setJointPosition(axis2,theta[2]*angle1)
-            sim.wait(10)
-            
-            sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
-            sim.wait(5)
-            sim.setJointPosition(axis3,0.01)
-            sim.wait(5)
-            sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','ture')
-            sim.wait(5)
-            sim.setJointPosition(axis3,-0.03)
-             sim.wait(5)
-            sim.setJointPosition(axis3, 0.01)
-            sim.wait(10)
-            theta = ik(-0.3, -0.55)
-             sim.setJointPosition(axis3, 0.01)
-            sim.setJointPosition(axis1,theta[1]*angle1)
-            sim.setJointPosition(axis2,theta[2]*angle1)
-            sim.wait(5)
-            sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
-            sim.wait(5)
-            sim.setJointPosition(axis3,0.01)
-
-    end   
-    
-    
-    
-end
-&lt;/t&gt;
-&lt;/tnodes&gt;
-&lt;/leo_file&gt;
 </pre>
 <p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/swlLFBmwCfo" width="560"></iframe></strong></p>
 <p><strong>Mtb_robot_loop.lua:</strong></p>
@@ -1397,11 +1044,10 @@ function ik(x, y)
     end
 end
  
-theta = ik(0.2, 0.7)
- 
-print(theta[1], theta[2])
-            sim.setJointPosition(axis1, 0)
-            sim.setJointPosition(axis2, 0)
+theta = ik(0.3, 0.3)
+
+            sim.setJointPosition(axis1,theta[1]*angle1*0)
+            sim.setJointPosition(axis2,theta[2]*angle1*0)
             sim.wait(5)
     
     while(true)
@@ -1417,8 +1063,9 @@ print(theta[1], theta[2])
             sim.setJointPosition(axis3, 0.01)
             sim.setJointPosition(axis1,theta[1]*angle1)
             sim.setJointPosition(axis2,theta[2]*angle1)
+            print(x,y)
+            print(theta[1],theta[2])
             sim.wait(10)
-            
             sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
             sim.wait(5)
             sim.setJointPosition(axis3,0.01)
@@ -1430,9 +1077,11 @@ print(theta[1], theta[2])
             sim.setJointPosition(axis3, 0.01)
             sim.wait(10)
             theta = ik(-0.3, -0.55)
-             sim.setJointPosition(axis3, 0.01)
+            sim.setJointPosition(axis3, 0.01)
             sim.setJointPosition(axis1,theta[1]*angle1)
             sim.setJointPosition(axis2,theta[2]*angle1)
+            print(x,y)
+            print(theta[1],theta[2])
             sim.wait(5)
             sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
             sim.wait(5)
@@ -1666,5 +1315,6 @@ function sysCall_sensing()
         end
     end
 end</pre>
+<h2>W18</h2>
 </div>
 </div></div></div>
