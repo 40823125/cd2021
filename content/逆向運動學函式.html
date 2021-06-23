@@ -142,29 +142,42 @@ img.add_border {
 <p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/dp8DqVPdMtE" width="560"></iframe></strong></p>
 <p><strong>Mtb_robot_keyboard.lua:</strong></p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    -- do some initialization here
      axis1=sim.getObjectHandle('MTB_axis1')
      axis2=sim.getObjectHandle('MTB_axis2')
      axis3=sim.getObjectHandle('MTB_axis3')
+     suctionPad=sim.getObjectHandle('suctionPad')     
      rotation1 = 0
      rotation2 = 0
      distance3 = 0
-    -- Do some initial settings here
-    -- Get object handle
-      
-     deg = math.pi/180
-     --sim.sJointTargetVelocity(joint,5.5)
      
+     deg = math.pi/180
+function ik(x, y)
+    theta = ik(0.2, 0.7)
+    theta = ik(-0.3, -0.55)
+    -- (x, y) need to be located inside the circle with radius a1+a2
+    if (x^2 + y^2) &lt;= (a1+ a2)^2 then
+        q2 = math.acos((x^2+y^2-a1^2-a2^2)/(2*a1*a2))
+        q1 = math.atan2(y, x) - math.atan2((a2*math.sin(q2)), (a1+a2*math.cos(q2)))
+        return {round(q1*deg, 4), round(q2*deg, 4)}
+    end
+    print(theta[1], theta[2])
+  
+end   
+     
+    
+     
+
 end
- 
 function sysCall_actuation()
- calibration = 0.01
+ calibration = 0.004
  message,auxiliaryData=sim.getSimulatorMessage()
  if (message==sim.message_keypress) then
       print(auxiliaryData[1])--key
       if (auxiliaryData[1]==string.byte(' ')) then
-      endd
+      end
        --Display keyboard key code
-      if (auxiliaryData[1]==97) then--a
+      if (auxiliaryData[1]==97) then --a
       rotation1 = rotation1 + 5*deg
       sim.setJointPosition(axis1, rotation1)
       end
@@ -174,11 +187,11 @@ function sysCall_actuation()
       sim.setJointPosition(axis1, rotation1)
       end
       -- Press the "d" key to turn axis1 5 degrees clockwise
-      if (auxiliaryData[1]==119) then--w
+      if (auxiliaryData[1]==119) then --w
       rotation2 = rotation2 + 5*deg
       sim.setJointPosition(axis2, rotation2)
       end
-      -- Press the "w" key to turn axis2 5 degrees counterclockwise
+       -- Press the "w" key to turn axis2 5 degrees counterclockwise
       if (auxiliaryData[1]==115) then --s
       rotation2 = rotation2 - 5*deg
       sim.setJointPosition(axis2, rotation2)
@@ -194,20 +207,41 @@ function sysCall_actuation()
       sim.setJointPosition(axis3, distance3)
       end
       -- Press the "q" key to move up 0.01
+      if (auxiliaryData[1]==122) then --z 
+      sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
+      end -- Press "z" key to activate the suction pad
+      if (auxiliaryData[1]==120) then --x
+      sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
+      end -- Press "x" key to deactivate the suction pad
+      if (auxiliaryData[1]==49) then --1
+      V1=43.9242*deg
+      V2=66.007*deg
+      sim.setJointPosition(axis1, V1)
+      sim.setJointPosition(axis2, V2)
+      print(0.2,0.7)
+      end
+      -- Press "1" to go to (0.2, 0.7)
+      if (auxiliaryData[1]==50) then --2
+      V1=-158.2529*deg
+      V2=87.7894*deg
+      sim.setJointPosition(axis1, V1)
+      sim.setJointPosition(axis2, V2)
+      print(-0.3,-0.55)
+      end
+      -- Press "2" to go to (-0.3,- 0.55)
       
- end   
- 
+  
+ end    
+
+
 end
+
 function sysCall_sensing()
     -- put your sensing code here
-    
 end
- 
 function sysCall_cleanup()
     -- do some clean-up here
-    
 end
- 
 </pre>
 <p><strong><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/swlLFBmwCfo" width="560"></iframe></strong></p>
 <p><strong>Mtb_robot_loop.lua:</strong></p>
